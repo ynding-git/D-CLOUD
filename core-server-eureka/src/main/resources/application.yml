@@ -1,11 +1,11 @@
 server:
-  port: 8080
+  port: ${EUREKA_PORT:10101}
 
 eureka:
   instance:
     hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: false #不注册自己
+    fetchRegistry: false #不要在本地缓存注册表信息
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
