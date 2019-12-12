@@ -22,6 +22,7 @@
         <module>core-server-bus</module>
         <module>monitor-hystrix-dashboard</module>
         <module>physical-book-meta</module>
+        <module>physical-person-meta</module>
     </modules>
 
     <dependencyManagement>
@@ -107,6 +108,17 @@
             <artifactId>lombok</artifactId>
             <version>1.18.8</version>
             <scope>compile</scope>
+        </dependency>
+        <!--swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.6.1</version>
         </dependency>
         <!--hutool-->
         <dependency>

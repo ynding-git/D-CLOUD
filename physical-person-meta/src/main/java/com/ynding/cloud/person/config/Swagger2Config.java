@@ -1,4 +1,4 @@
-package com.ynding.cloud.book.config;
+package com.ynding.cloud.person.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +25,7 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.ynding.cloud.book.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.ynding.cloud.person.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 ;

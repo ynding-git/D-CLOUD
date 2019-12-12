@@ -2,7 +2,6 @@ package com.ynding.cloud.common.model.entity;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -15,7 +14,6 @@ import java.io.Serializable;
  */
 @Data
 @Entity
-@Builder
 @ApiModel(value = "Book", description = "书籍")
 @Table(name = "t_book")
 public class Book implements Serializable {
