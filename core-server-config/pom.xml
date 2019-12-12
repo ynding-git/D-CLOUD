@@ -9,9 +9,7 @@
     </parent>
     <groupId>com.ynding.cloud</groupId>
     <artifactId>core-server-config</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>core-server-config</name>
-    <description>server config</description>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>

@@ -9,9 +9,6 @@
     </parent>
     <groupId>com.ynding.cloud</groupId>
     <artifactId>core-server-eureka</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>core-server-eureka</name>
-    <description>server eureka</description>
     <packaging>jar</packaging>
 
     <properties>
@@ -38,8 +35,6 @@
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
                 </includes>
-                <!-- filtering为true的时候，这时只会把过滤的文件（<excludes>）打到classpath下，
-                filtering为false的时候，会把不需要过滤的文件（<includes>）打到classpath下 -->
                 <filtering>false</filtering>
             </resource>
         </resources>

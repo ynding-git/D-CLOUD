@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      label: master
+      discovery:
+        enabled:  true
+        serviceId:  core-server-config
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:10101/eureka/
