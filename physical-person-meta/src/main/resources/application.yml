@@ -37,4 +37,7 @@ management:
         allowed-origins: "*"
         allowed-methods: "*"
 
-
+logging:
+  level:
+    com.ynding.cloud.person: debug
+    org.hibernate.SQL: debug

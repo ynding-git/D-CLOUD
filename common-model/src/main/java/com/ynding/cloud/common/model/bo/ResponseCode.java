@@ -12,7 +12,9 @@ public enum ResponseCode implements IResponseCode{
     NOT_FOUND(404, "not_found"),
     SERVER_ERROR_CODE(500, "server_error"),
     USER_AlREAD_EXIST_EXCEPTION(401,"用户已经存在"),
-    DOWNGRADE(406, "downgrade");
+    DOWNGRADE(406, "downgrade"),
+    BOOK_FEIGN_ERROR(300,"调用book服务失败")
+    ;
 
     private int code;
     private String message;
