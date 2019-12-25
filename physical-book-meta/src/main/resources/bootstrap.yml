@@ -1,0 +1,26 @@
+server:
+  port: 10201
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/
+  instance:
+    preferIpAddress: true
+
+spring:
+  application:
+    name: physical-book-meta
+  cloud:
+    config:
+      label: master
+      name: book
+      profile: dev
+      discovery:
+        enabled: true
+        serviceId: core-server-config
+
+    bus:
+      trace:
+        enabled: true #开启消息跟踪
+

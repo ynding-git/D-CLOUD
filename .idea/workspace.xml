@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f70c72c9-916b-4c90-9bb4-24edf8cb0b69" name="Default" comment="增加断路器">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/D-CLOUD.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/ynding.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-model/target/classes/com/ynding/cloud/common/model/bo/CloudServiceName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-model/target/classes/com/ynding/cloud/common/model/bo/GQuery.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-model/target/classes/com/ynding/cloud/common/model/bo/IResponseCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-model/target/classes/com/ynding/cloud/common/model/bo/ResponseBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-model/target/classes/com/ynding/cloud/common/model/bo/ResponseCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-model/target/classes/com/ynding/cloud/common/model/bo/ResponsePageBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-model/target/classes/com/ynding/cloud/common/model/entity/Book.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-bus/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-bus/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-bus/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-bus/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-bus/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-bus/target/classes/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-bus/target/classes/com/ynding/cloud/core/server/bus/CoreServerBusApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-bus/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-bus/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-bus/target/test-classes/com/ynding/cloud/core/server/bus/CoreServerBusApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-config/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-config/target/classes/com/ynding/cloud/core/server/config/CoreServerConfigApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-config/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-eureka/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-eureka/target/classes/com/ynding/cloud/core/server/eureka/CoreServerEurekaApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-eureka/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core-server-eureka/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/target/classes/com/ynding/cloud/monitor/hystrix/dashboard/MonitorHystrixDashboardApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/src/main/java/com/ynding/cloud/turbine/MonitorTurbineApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/target/classes/com/ynding/cloud/turbine/MonitorTurbineApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-turbine/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/src/main/java/com/ynding/cloud/book/controller/TestConfigController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/classes/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/classes/com/ynding/cloud/book/PhysicalBookMetaApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/classes/com/ynding/cloud/book/config/Swagger2Config.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/classes/com/ynding/cloud/book/controller/BookController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/classes/com/ynding/cloud/book/controller/TestConfigController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/classes/com/ynding/cloud/book/data/BookRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/classes/com/ynding/cloud/book/service/BookService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/classes/h2/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/classes/h2/test-data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/target/test-classes/com/ynding/cloud/book/PhysicalBookMetaApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/target/classes/com/ynding/cloud/person/PhysicalPersonMetaApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/target/classes/com/ynding/cloud/person/config/Swagger2Config.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/target/classes/com/ynding/cloud/person/controller/PersonController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/target/classes/com/ynding/cloud/person/feign/BookService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/target/classes/com/ynding/cloud/person/feign/hystrix/BookServiceHystrix.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-person-meta/target/test-classes/com/ynding/cloud/person/PhysicalPersonMetaApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-server-bus/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-bus/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-server-bus/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-bus/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-server-bus/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-bus/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-server-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-config/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-server-config/src/main/java/com/ynding/cloud/core/server/config/CoreServerConfigApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-config/src/main/java/com/ynding/cloud/core/server/config/CoreServerConfigApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-server-config/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-config/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-server-eureka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-eureka/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-server-eureka/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-hystrix-dashboard/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-hystrix-dashboard/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-hystrix-dashboard/src/main/java/com/ynding/cloud/monitor/hystrix/dashboard/MonitorHystrixDashboardApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/src/main/java/com/ynding/cloud/monitor/hystrix/dashboard/MonitorHystrixDashboardApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-hystrix-dashboard/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-hystrix-dashboard/src/test/java/com/ynding/cloud/monitor/hystrix/dashboard/MonitorHystrixDashboardApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physical-book-meta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-book-meta/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/physical-book-meta/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-book-meta/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/physical-person-meta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/PhysicalPersonMetaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/PhysicalPersonMetaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/feign/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/feign/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/feign/hystrix/BookServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/feign/hystrix/BookServiceHystrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/physical-person-meta/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="E:\GitHome\git-fun\D-CLOUD\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\MvnRepo\mvn_cloud" />
+        <option name="mavenHome" value="D:/Maven/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="E:\MvnRepo\mvn_cloud\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UmlgalUAU6h1vcaQ2gx6DkvC7P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="ConfigurationPropertiesBean&#9;PSI&#9;JAVA://org.springframework.boot.context.properties.EnableConfigurationPropertiesImportSelector.ConfigurationPropertiesBeanRegistrar" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="E:/Users/Desktop/springcloud" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.24414062" />
+    <property name="project.structure.side.proportion" value="0.6627907" />
+    <property name="settings.editor.selected.configurable" value="SQL Resolution Scopes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ynding.cloud.person.config" />
+      <recent name="com.ynding.cloud.book.config" />
+      <recent name="com.ynding.cloud.book.entity" />
+      <recent name="com.ynding.cloud.book.data" />
+      <recent name="com.ynding.cloud.book.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHome\git-fun\D-CLOUD\physical-book-meta\src\main\resources" />
+      <recent name="E:\GitHome\git-fun\D-CLOUD" />
+      <recent name="E:\GitHome\git-fun\D-CLOUD\common-model\src\main\java\com\ynding\cloud\common\model\bo" />
+      <recent name="E:\GitHome\git-fun\D-CLOUD\monitor-hystrix-dashboard" />
+      <recent name="E:\GitHome\git-fun\D-CLOUD\core-server-config" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn compile" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MonitorTurbineApplication">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CoreServerBusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="core-server-bus" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ynding.cloud.core.server.bus.CoreServerBusApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CoreServerConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="core-server-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ynding.cloud.core.server.config.CoreServerConfigApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CoreServerEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="core-server-eureka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ynding.cloud.core.server.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ynding.cloud.core.server.eureka.CoreServerEurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonitorHystrixDashboardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="monitor-hystrix-dashboard" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ynding.cloud.monitor.hystrix.dashboard.MonitorHystrixDashboardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonitorTurbineApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="monitor-turbine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ynding.cloud.turbine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ynding.cloud.turbine.MonitorTurbineApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhysicalBookMetaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="physical-book-meta" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ynding.cloud.book.PhysicalBookMetaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhysicalPersonMetaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="physical-person-meta" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ynding.cloud.person.PhysicalPersonMetaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.CoreServerConfigApplication" />
+      <item itemvalue="Spring Boot.CoreServerEurekaApplication" />
+      <item itemvalue="Spring Boot.CoreServerBusApplication" />
+      <item itemvalue="Spring Boot.PhysicalBookMetaApplication" />
+      <item itemvalue="Spring Boot.MonitorHystrixDashboardApplication" />
+      <item itemvalue="Spring Boot.PhysicalPersonMetaApplication" />
+      <item itemvalue="Spring Boot.MonitorTurbineApplication" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.22199453" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\23290\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f70c72c9-916b-4c90-9bb4-24edf8cb0b69" name="Default" comment="" />
+      <created>1575621568605</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575621568605</updated>
+      <workItem from="1575621571623" duration="5153000" />
+      <workItem from="1575777514479" duration="6325000" />
+      <workItem from="1575789490211" duration="6609000" />
+      <workItem from="1575852734143" duration="3376000" />
+      <workItem from="1575863129988" duration="10000" />
+      <workItem from="1575873632641" duration="2653000" />
+      <workItem from="1575890695845" duration="2485000" />
+      <workItem from="1575894840880" duration="585000" />
+      <workItem from="1575939655036" duration="1645000" />
+      <workItem from="1575941718214" duration="2371000" />
+      <workItem from="1575944294201" duration="4946000" />
+      <workItem from="1575956546478" duration="1749000" />
+      <workItem from="1575968315441" duration="1301000" />
+      <workItem from="1575969785032" duration="28000" />
+      <workItem from="1575974026509" duration="76000" />
+      <workItem from="1575975041999" duration="24000" />
+      <workItem from="1575980271240" duration="1007000" />
+      <workItem from="1576028567082" duration="7514000" />
+      <workItem from="1576054051193" duration="3705000" />
+      <workItem from="1576111920798" duration="6295000" />
+      <workItem from="1576119002254" duration="687000" />
+      <workItem from="1576119783185" duration="206000" />
+      <workItem from="1576120045300" duration="8852000" />
+      <workItem from="1576132484093" duration="1854000" />
+      <workItem from="1576134394156" duration="24000" />
+      <workItem from="1576134785967" duration="421000" />
+      <workItem from="1576139806625" duration="10819000" />
+      <workItem from="1576197980234" duration="17468000" />
+      <workItem from="1576220816859" duration="12218000" />
+      <workItem from="1576285232078" duration="9779000" />
+      <workItem from="1576296006144" duration="168000" />
+      <workItem from="1576296181429" duration="1240000" />
+      <workItem from="1576736359044" duration="134000" />
+      <workItem from="1576744847974" duration="2230000" />
+      <workItem from="1576751496005" duration="1297000" />
+      <workItem from="1576804215124" duration="3600000" />
+      <workItem from="1576891145107" duration="1588000" />
+      <workItem from="1577175641693" duration="574000" />
+      <workItem from="1577176394207" duration="61000" />
+      <workItem from="1577176575761" duration="6387000" />
+      <workItem from="1577234660356" duration="25521000" />
+      <workItem from="1577273647486" duration="3131000" />
+    </task>
+    <task id="LOCAL-00001" summary="修改springboot版本和springCloud匹配">
+      <created>1575949087952</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575949087953</updated>
+    </task>
+    <task id="LOCAL-00002" summary="增加多个模块">
+      <created>1576132563091</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576132563091</updated>
+    </task>
+    <task id="LOCAL-00003" summary="增加多个模块">
+      <created>1576132713524</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576132713524</updated>
+    </task>
+    <task id="LOCAL-00004" summary="增加多个模块:book,person,">
+      <created>1576149494232</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576149494233</updated>
+    </task>
+    <task id="LOCAL-00005" summary="增加断路器">
+      <created>1576151833819</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576151833819</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="true" />
+    <MESSAGE value="修改springboot版本和springCloud匹配" />
+    <MESSAGE value="增加多个模块" />
+    <MESSAGE value="增加多个模块:book,person," />
+    <MESSAGE value="增加断路器" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加断路器" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577176149166">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1577176149166" />
+    <state x="283" y="10" key="CommitChangelistDialog2" timestamp="1577277023587">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="283" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577277023587" />
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1577245033157">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1577245033157" />
+    <state x="593" y="310" width="373" height="203" key="Github.CreateGistDialog" timestamp="1577267794719">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="593" y="310" width="373" height="203" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1577267794719" />
+    <state width="1138" height="214" key="GridCell.Tab.0.bottom" timestamp="1577277033219">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1138" height="214" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577277033219" />
+    <state width="1138" height="214" key="GridCell.Tab.0.center" timestamp="1577277033218">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1138" height="214" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577277033218" />
+    <state width="1138" height="214" key="GridCell.Tab.0.left" timestamp="1577277033218">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1138" height="214" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577277033218" />
+    <state width="1138" height="214" key="GridCell.Tab.0.right" timestamp="1577277033219">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1138" height="214" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577277033219" />
+    <state width="1138" height="214" key="GridCell.Tab.1.bottom" timestamp="1577277033220">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1138" height="214" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577277033220" />
+    <state width="1138" height="214" key="GridCell.Tab.1.center" timestamp="1577277033219">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1138" height="214" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577277033219" />
+    <state width="1138" height="214" key="GridCell.Tab.1.left" timestamp="1577277033219">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1138" height="214" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577277033219" />
+    <state width="1138" height="214" key="GridCell.Tab.1.right" timestamp="1577277033220">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1138" height="214" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577277033220" />
+    <state x="431" y="137" key="RollbackChangesDialog" timestamp="1577276958124">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="137" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577276958124" />
+    <state x="114" y="0" key="SettingsEditor" timestamp="1577238758476">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="114" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577238758476" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1577191007285">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1577191007285" />
+    <state x="461" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1575969793215">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="461" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1575969793215" />
+    <state x="457" y="52" width="621" height="720" key="find.popup" timestamp="1577275495556">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="457" y="52" width="621" height="720" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1577275495556" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1577277033204">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1577277033204" />
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="E:\GitHome\git-fun\D-CLOUD\physical-book-meta" />
+    <option value="compile" />
+    <option value="clean" />
+    <option value="compiler:compile" />
+    <option value="clean compile" />
+  </component>
+</project>

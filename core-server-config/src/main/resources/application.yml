@@ -11,6 +11,8 @@ spring:
     name: core-server-config
   zipkin:
     base-url: http://localhost:9411
+    sender:
+      type: rabbit
   sleuth:
     sampler:
       percentage: 1.0 #采样比例
@@ -22,10 +24,16 @@ spring:
   cloud:
     config:
       server:
-        encrypt.enabled: false
+#        encrypt.enabled: false
         git:
+          skipSslValidation: true
           uri: https://github.com/yahaweilian/cloud-config.git
           searchPaths: /
+          # 对于使用git,svn做为后端配置，从远程库获取配置文件，需要存储到本地文件
+          basedir: /tmp/spring-cloud-repo
+          # 配置中心通过git从远程git库，有时本地的拷贝被污染，这时配置中心无法从远程库更新本地配置,设置force-pull=true，则强制从远程库中更新本地库
+          force-pull: true
+      label: master
 
 #这样才能访问 /actuator/bus-refresh
 management:
