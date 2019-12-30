@@ -9,6 +9,13 @@ eureka:
 spring:
   application:
     name: turbine
+  zipkin:
+    base-url: http://localhost:9411
+    sender:
+      type: rabbit
+  sleuth:
+    sampler:
+      probability: 1.0 #采样比例
   rabbitmq:
     host: ${RABBIT_MQ_HOST:localhost}
     port: ${RABBIT_MQ_PORT:5672}
@@ -24,3 +31,4 @@ management:
 logging:
   level:
     org.springframework.web: debug
+

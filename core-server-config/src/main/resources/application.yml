@@ -15,7 +15,7 @@ spring:
       type: rabbit
   sleuth:
     sampler:
-      percentage: 1.0 #采样比例
+      probability: 1.0
   rabbitmq:
     host: ${RABBIT_MQ_HOST:localhost}
     port: ${RABBIT_MQ_PORT:5672}

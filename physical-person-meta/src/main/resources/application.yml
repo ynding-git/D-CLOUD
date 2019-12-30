@@ -65,4 +65,6 @@ feign:
 logging:
   level:
     com.ynding.cloud.person: debug
-    org.hibernate.SQL: debug
+    org.hibernate.SQL: WARN
+    com.netflix: WARN
+    org.springframework.web: WARN

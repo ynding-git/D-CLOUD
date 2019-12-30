@@ -1,6 +1,4 @@
-server:
-  port: 10201
-
+#eureka配置需放在bootstrap.yml中
 eureka:
   client:
     serviceUrl:
@@ -9,8 +7,6 @@ eureka:
     preferIpAddress: true
 
 spring:
-  application:
-    name: physical-book-meta
   cloud:
     config:
       label: master
@@ -19,8 +15,13 @@ spring:
       discovery:
         enabled: true
         serviceId: core-server-config
-
     bus:
       trace:
         enabled: true #开启消息跟踪
+  rabbitmq:
+    host: ${RABBIT_MQ_HOST:localhost}
+    port: ${RABBIT_MQ_PORT:5672}
+    username: ${RABBIT_MQ_USERNAME:guest}
+    password: ${RABBIT_MQ_PASSWORD:guest}
 
+hello: 111 #会被从github上的获得属性覆盖

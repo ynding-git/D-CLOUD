@@ -1,8 +1,8 @@
-package com.ynding.cloud.person.feign.hystrix;
+package com.ynding.cloud.person.feign.fallback;
 
 import com.ynding.cloud.common.model.bo.ResponseBean;
 import com.ynding.cloud.common.model.entity.Book;
-import com.ynding.cloud.person.feign.BookService;
+import com.ynding.cloud.person.feign.BookClient;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -15,7 +15,7 @@ import static com.ynding.cloud.common.model.bo.ResponseCode.BOOK_FEIGN_ERROR;
  * @version 2019/12/12
  */
 @Component
-public class BookServiceHystrix implements BookService {
+public class BookClientImpl implements BookClient {
 
     @Override
     public ResponseBean findList(Map<String, Object> params) {
