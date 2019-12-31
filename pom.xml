@@ -44,6 +44,7 @@
         <module>monitor-turbine</module>
         <module>physical-book-meta</module>
         <module>physical-person-meta</module>
+        <module>route-server-zuul</module>
     </modules>
 
     <repositories>

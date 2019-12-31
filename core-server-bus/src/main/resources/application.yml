@@ -2,6 +2,8 @@ server:
   port: 10103
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/

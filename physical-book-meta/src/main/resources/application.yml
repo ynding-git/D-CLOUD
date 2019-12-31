@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: physical-book-meta
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    deserialization:
+     #允许对象忽略json中不存在的属性
+     fail_on_unknown_properties: false
   zipkin:
     base-url: http://localhost:9411
     sender:
@@ -25,7 +31,35 @@ spring:
         use_sql_comments: true
         format_sql: true
 
-feign.hystrix.enabled: true
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  hystrix:
+    enabled: true
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  OkToRetryOnAllOperations: false
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000 ##并发执行的最大线程数，默认10
+      maxQueueSize: 1000 ##BlockingQueue的最大队列数
+      queueSizeRejectionThreshold: 500 ##即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
 
 #这样才能访问 /actuator/bus-refresh
 management:

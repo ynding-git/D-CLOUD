@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f70c72c9-916b-4c90-9bb4-24edf8cb0b69" name="Default" comment="spring cloud config bus git webHooks 配置">
+    <list default="true" id="f70c72c9-916b-4c90-9bb4-24edf8cb0b69" name="Default" comment="配置修改">
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/src/main/java/com/ynding/cloud/route/zuul/RouteServerZuulApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/src/main/java/com/ynding/cloud/route/zuul/filter/FilterUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/src/main/java/com/ynding/cloud/route/zuul/filter/ResponseFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/src/main/java/com/ynding/cloud/route/zuul/filter/TrackingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route-server-zuul/src/test/java/com/ynding/cloud/route/zuul/RouteServerZuulApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-server-bus/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-bus/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core-server-config/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-config/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core-server-eureka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-eureka/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-hystrix-dashboard/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monitor-hystrix-dashboard/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-turbine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-turbine/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monitor-turbine/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-turbine/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/physical-book-meta/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-book-meta/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/physical-book-meta/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-book-meta/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/controller/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/feign/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/feign/BookClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/feign/hystrix/BookServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/src/main/java/com/ynding/cloud/person/feign/fallback/BookClientImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/physical-person-meta/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +42,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -65,6 +77,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -72,7 +85,7 @@
     <property name="SearchEverywhereHistoryKey" value="ConfigurationPropertiesBean&#9;PSI&#9;JAVA://org.springframework.boot.context.properties.EnableConfigurationPropertiesImportSelector.ConfigurationPropertiesBeanRegistrar" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../git-dev" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/route-server-zuul/src/main/java/com/ynding/cloud/route/zuul/filter" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Facets" />
@@ -82,18 +95,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ynding.cloud.route.zuul.filter" />
       <recent name="com.ynding.cloud.person.config" />
       <recent name="com.ynding.cloud.book.config" />
       <recent name="com.ynding.cloud.book.entity" />
       <recent name="com.ynding.cloud.book.data" />
-      <recent name="com.ynding.cloud.book.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHome\git-fun\D-CLOUD\route-server-zuul\src\main\java\com\ynding\cloud\route\zuul\filter" />
       <recent name="E:\GitHome\git-fun\D-CLOUD\physical-book-meta\src\main\resources" />
       <recent name="E:\GitHome\git-fun\D-CLOUD" />
       <recent name="E:\GitHome\git-fun\D-CLOUD\common-model\src\main\java\com\ynding\cloud\common\model\bo" />
       <recent name="E:\GitHome\git-fun\D-CLOUD\monitor-hystrix-dashboard" />
-      <recent name="E:\GitHome\git-fun\D-CLOUD\core-server-config" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -109,7 +122,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.PhysicalPersonMetaApplication">
+  <component name="RunManager" selected="Spring Boot.RouteServerZuulApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -185,6 +198,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RouteServerZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="route-server-zuul" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ynding.cloud.route.zuul.RouteServerZuulApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" />
@@ -203,23 +223,19 @@
       <item itemvalue="Spring Boot.MonitorHystrixDashboardApplication" />
       <item itemvalue="Spring Boot.PhysicalPersonMetaApplication" />
       <item itemvalue="Spring Boot.MonitorTurbineApplication" />
+      <item itemvalue="Spring Boot.RouteServerZuulApplication" />
     </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.20833333" />
+          <option name="contentProportion" value="0.23702186" />
           <treeState>
             <expand>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -298,7 +314,8 @@
       <workItem from="1577504727517" duration="8618000" />
       <workItem from="1577583611151" duration="8000" />
       <workItem from="1577669156734" duration="5838000" />
-      <workItem from="1577684580544" duration="8784000" />
+      <workItem from="1577684580544" duration="15214000" />
+      <workItem from="1577754501232" duration="9290000" />
     </task>
     <task id="LOCAL-00001" summary="修改springboot版本和springCloud匹配">
       <created>1575949087952</created>
@@ -349,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577323542910</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="配置修改">
+      <created>1577693873550</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1577693873550</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,13 +381,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="true" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="修改springboot版本和springCloud匹配" />
     <MESSAGE value="增加多个模块" />
     <MESSAGE value="增加多个模块:book,person," />
     <MESSAGE value="增加断路器" />
     <MESSAGE value="spring cloud config bus git webHooks 配置" />
     <MESSAGE value="解决github webHooks 回调刷新接口 报请求体错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决github webHooks 回调刷新接口 报请求体错误" />
+    <MESSAGE value="配置修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置修改" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577176149166">
@@ -382,54 +408,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577691952114" />
-    <state x="283" y="10" key="CommitChangelistDialog2" timestamp="1577323538309">
+    <state x="283" y="10" key="CommitChangelistDialog2" timestamp="1577693868501">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="283" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577323538309" />
-    <state x="88" y="64" key="DiffContextDialog" timestamp="1577323467613">
+    <state x="283" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577693868501" />
+    <state x="88" y="64" key="DiffContextDialog" timestamp="1577693850401">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="88" y="64" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1577323467613" />
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1577684819950">
+    <state x="88" y="64" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1577693850401" />
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1577699540839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1577684819950" />
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1577699540839" />
     <state x="593" y="310" width="373" height="203" key="Github.CreateGistDialog" timestamp="1577267794719">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="593" y="310" width="373" height="203" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1577267794719" />
-    <state width="1158" height="230" key="GridCell.Tab.0.bottom" timestamp="1577692442012">
+    <state width="1116" height="270" key="GridCell.Tab.0.bottom" timestamp="1577770214485">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1158" height="230" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577692442012" />
-    <state width="1158" height="230" key="GridCell.Tab.0.center" timestamp="1577692442012">
+    <state width="1116" height="270" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577770214485" />
+    <state width="1116" height="270" key="GridCell.Tab.0.center" timestamp="1577770214484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1158" height="230" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577692442012" />
-    <state width="1158" height="230" key="GridCell.Tab.0.left" timestamp="1577692442012">
+    <state width="1116" height="270" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577770214484" />
+    <state width="1116" height="270" key="GridCell.Tab.0.left" timestamp="1577770214484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1158" height="230" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577692442012" />
-    <state width="1158" height="230" key="GridCell.Tab.0.right" timestamp="1577692442012">
+    <state width="1116" height="270" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577770214484" />
+    <state width="1116" height="270" key="GridCell.Tab.0.right" timestamp="1577770214484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1158" height="230" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577692442012" />
-    <state width="1158" height="230" key="GridCell.Tab.1.bottom" timestamp="1577692442013">
+    <state width="1116" height="270" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577770214484" />
+    <state width="1116" height="270" key="GridCell.Tab.1.bottom" timestamp="1577770214485">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1158" height="230" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577692442013" />
-    <state width="1158" height="230" key="GridCell.Tab.1.center" timestamp="1577692442012">
+    <state width="1116" height="270" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577770214485" />
+    <state width="1116" height="270" key="GridCell.Tab.1.center" timestamp="1577770214485">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1158" height="230" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577692442012" />
-    <state width="1158" height="230" key="GridCell.Tab.1.left" timestamp="1577692442012">
+    <state width="1116" height="270" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577770214485" />
+    <state width="1116" height="270" key="GridCell.Tab.1.left" timestamp="1577770214485">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1158" height="230" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577692442012" />
-    <state width="1158" height="230" key="GridCell.Tab.1.right" timestamp="1577692442013">
+    <state width="1116" height="270" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577770214485" />
+    <state width="1116" height="270" key="GridCell.Tab.1.right" timestamp="1577770214485">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1158" height="230" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577692442013" />
+    <state width="1116" height="270" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577770214485" />
     <state x="431" y="137" key="RollbackChangesDialog" timestamp="1577276958124">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -438,10 +464,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="114" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577685496108" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1577323550362">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1577694522801">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577323550362" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577694522801" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1577191007285">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -450,14 +476,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="461" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1577684660279" />
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577694502973">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1577694502973" />
     <state x="457" y="52" width="621" height="720" key="find.popup" timestamp="1577677951481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="457" y="52" width="621" height="720" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1577677951481" />
-    <state x="178" y="28" key="new project wizard" timestamp="1577684711530">
+    <state x="349" y="31" key="new project wizard" timestamp="1577698183437">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="178" y="28" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1577684711530" />
+    <state x="349" y="31" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1577698183437" />
     <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1577344199588">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

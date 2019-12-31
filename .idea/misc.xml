@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/physical-book-meta/pom.xml" />
         <option value="$PROJECT_DIR$/physical-person-meta/pom.xml" />
         <option value="$PROJECT_DIR$/monitor-turbine/pom.xml" />
+        <option value="$PROJECT_DIR$/route-server-zuul/pom.xml" />
       </list>
     </option>
   </component>

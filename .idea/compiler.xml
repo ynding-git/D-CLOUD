@@ -6,14 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="core-server-config" />
         <module name="core-server-eureka" />
         <module name="physical-book-meta" />
-        <module name="common-model" />
         <module name="monitor-hystrix-dashboard" />
+        <module name="route-server-zuul" />
         <module name="core-server-bus" />
-        <module name="monitor-turbine" />
         <module name="physical-person-meta" />
-        <module name="core-server-config" />
+        <module name="common-model" />
+        <module name="monitor-turbine" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,6 +32,7 @@
       <module name="monitor-turbine" options="-parameters" />
       <module name="physical-book-meta" options="-parameters" />
       <module name="physical-person-meta" options="-parameters" />
+      <module name="route-server-zuul" options="-parameters" />
     </option>
   </component>
 </project>
