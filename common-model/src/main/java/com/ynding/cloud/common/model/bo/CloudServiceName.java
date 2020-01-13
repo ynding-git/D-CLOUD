@@ -3,9 +3,14 @@ package com.ynding.cloud.common.model.bo;
 /**
  * 服务实例名称
  */
-public interface CloudServiceName {
+public final class CloudServiceName {
 
-    String CORE_SERVER_BUS = "core-server-bus";
+    //构造器私有化
+    private CloudServiceName(){
+        throw new AssertionError();
+    }
 
-    String PHYSICAL_BOOK_META = "physical-book-meta";
+    public final static String CORE_SERVER_BUS = "core-server-bus";
+
+    public final static String PHYSICAL_BOOK_META = "physical-book-meta";
 }

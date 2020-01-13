@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author ynding
@@ -27,9 +28,8 @@ public class BookController {
 
 	private final BookService bookService;
 
-	@Autowired
 	public BookController(BookService bookService) {
-		this.bookService = bookService;
+		this.bookService = Objects.requireNonNull(bookService);
 	}
 
 	@PostMapping("/insert")

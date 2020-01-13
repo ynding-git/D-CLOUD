@@ -16,8 +16,8 @@ public enum ResponseCode implements IResponseCode{
     BOOK_FEIGN_ERROR(300,"调用book服务失败")
     ;
 
-    private int code;
-    private String message;
+    private final int code;
+    private final String message;
 
     private ResponseCode(int code, String message) {
         this.code = code;
