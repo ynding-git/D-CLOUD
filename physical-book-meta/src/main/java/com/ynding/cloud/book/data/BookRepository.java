@@ -1,6 +1,6 @@
 package com.ynding.cloud.book.data;
 
-import com.ynding.cloud.common.model.entity.Book;
+import com.ynding.cloud.common.model.entity.book.Book;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;

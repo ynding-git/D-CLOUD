@@ -2,13 +2,12 @@ package com.ynding.cloud.person.feign;
 
 import com.ynding.cloud.common.model.bo.CloudServiceName;
 import com.ynding.cloud.common.model.bo.ResponseBean;
-import com.ynding.cloud.common.model.entity.Book;
+import com.ynding.cloud.common.model.entity.book.Book;
 import com.ynding.cloud.person.feign.fallback.BookClientImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Map;
 
 /**

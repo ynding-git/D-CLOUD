@@ -49,7 +49,7 @@
         <module>auth-server-authentication</module>
     </modules>
 
-   <!-- <repositories>
+    <!--<repositories>
         <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
@@ -58,7 +58,7 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-    </repositories>-->
+    </repositories>
 
     <pluginRepositories>
         <pluginRepository>
@@ -66,7 +66,7 @@
             <name>Spring GA Repository</name>
             <url>https://repo.spring.io/plugins-release/</url>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories>-->
 
     <dependencies>
         <!--自省和监控的集成功能-->

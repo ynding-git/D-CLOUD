@@ -2,7 +2,7 @@ package com.ynding.cloud.book.service;
 
 import com.ynding.cloud.book.data.BookRepository;
 import com.ynding.cloud.common.model.bo.GQuery;
-import com.ynding.cloud.common.model.entity.Book;
+import com.ynding.cloud.common.model.entity.book.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

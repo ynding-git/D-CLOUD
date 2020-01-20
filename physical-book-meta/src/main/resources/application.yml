@@ -10,17 +10,6 @@ spring:
     deserialization:
      #允许对象忽略json中不存在的属性
      fail_on_unknown_properties: false
-  zipkin:
-    base-url: http://localhost:9411
-    sender:
-      type: rabbit
-  sleuth:
-    sampler:
-      probability: 1.0 #采样比例
-  datasource:
-    #初始化数据结构/数据
-    schema: classpath:h2/schema.sql
-    data: classpath:h2/test-data.sql
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -51,9 +40,9 @@ ribbon:
 hystrix:
   threadpool:
     default:
-      coreSize: 1000 ##并发执行的最大线程数，默认10
-      maxQueueSize: 1000 ##BlockingQueue的最大队列数
-      queueSizeRejectionThreshold: 500 ##即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+      coreSize: 1000 #并发执行的最大线程数，默认10
+      maxQueueSize: 1000 #BlockingQueue的最大队列数
+      queueSizeRejectionThreshold: 500 #即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
   command:
     default:
       execution:

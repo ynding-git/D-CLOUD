@@ -1,7 +1,7 @@
 package com.ynding.cloud.person.feign.fallback;
 
 import com.ynding.cloud.common.model.bo.ResponseBean;
-import com.ynding.cloud.common.model.entity.Book;
+import com.ynding.cloud.common.model.entity.book.Book;
 import com.ynding.cloud.person.feign.BookClient;
 import org.springframework.stereotype.Component;
 

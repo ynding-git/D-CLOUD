@@ -1,4 +1,4 @@
-package com.ynding.cloud.common.model.entity;
+package com.ynding.cloud.common.model.entity.book;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

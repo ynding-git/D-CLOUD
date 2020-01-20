@@ -1,17 +1,17 @@
 #eureka配置需放在bootstrap.yml中
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/
 
 spring:
   cloud:
     config:
       label: master
-      name: book
+      name: person
       profile: dev
       discovery:
         enabled: true
@@ -36,9 +36,13 @@ spring:
     http:
       legacy:
         enabled: true
-  datasource:
-    #初始化数据结构/数据
-    schema: classpath:h2/schema.sql
-    data: classpath:h2/test-data.sql
-
-hello: 111 #会被从github上的获得属性覆盖
+  redis:
+    host: ${REDIS_HOST:192.168.19.130}
+    port: ${REDIS_PORT:6379}
+    lettuce:
+      pool:
+        max-active: 300
+  data:
+    mongodb:
+      uri: mongodb://192.168.19.130/test
+      port: 27017

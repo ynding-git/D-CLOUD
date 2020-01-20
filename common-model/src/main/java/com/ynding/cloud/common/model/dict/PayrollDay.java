@@ -45,4 +45,9 @@ public enum PayrollDay {
             return basePay + overtimePay(minsWorked, payRate);
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println(MONDAY.payType.pay(4 * 60, 100));
+        System.out.println(SATURDAY.payType.pay(4 * 60, 100));
+    }
 }

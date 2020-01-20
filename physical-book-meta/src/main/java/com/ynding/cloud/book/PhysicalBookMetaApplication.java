@@ -13,7 +13,7 @@ import javax.persistence.EntityManager;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-@EntityScan("com.ynding.cloud.common.model.entity")
+@EntityScan("com.ynding.cloud.common.model.entity.book")
 @EnableBinding(Source.class)//绑定消息代理
 public class PhysicalBookMetaApplication {
 
