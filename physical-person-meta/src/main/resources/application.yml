@@ -12,7 +12,7 @@ spring:
       #允许对象忽略json中不存在的属性
       fail_on_unknown_properties: false
   zipkin:
-    base-url: http://192.168.19.130:9411
+    base-url: http://101.37.202.3:9411
     sender:
       type: rabbit
   sleuth:

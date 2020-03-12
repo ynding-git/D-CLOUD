@@ -9,27 +9,64 @@ eureka:
     serviceUrl:
       defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/
 
+#turbine:
+#  aggregator:
+#    clusterConfig: default
+#  appConfig: physical-person-meta  # 配置Eureka中的serviceId列表，表明监控哪些服务
+#  clusterNameExpression: new String("default")
+
 spring:
   application:
     name: turbine
   zipkin:
-    base-url: http://192.168.19.130:9411
+    base-url: http://101.37.202.3:9411
     sender:
       type: rabbit
   sleuth:
     sampler:
       probability: 1.0 #采样比例
   rabbitmq:
-    host: ${RABBIT_MQ_HOST:192.168.19.130}
+    host: ${RABBIT_MQ_HOST:101.37.202.3}
     port: ${RABBIT_MQ_PORT:5672}
     username: ${RABBIT_MQ_USERNAME:guest}
     password: ${RABBIT_MQ_PASSWORD:guest}
+    virtual-host: /
+  #stream绑定
+  cloud:
+    stream:
+      binders:
+        rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: ${spring.rabbitmq.host}
+                port: ${spring.rabbitmq.port}
+                username: ${spring.rabbitmq.username}
+                password: ${spring.rabbitmq.password}
+                virtual-host: ${spring.rabbitmq.virtual-host}
+      default-binder: rabbit
 
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+  #关闭hystrix.stream端点
+  endpoint:
+    hystrix:
+      stream:
+        enabled: false
+#采集
+#hystrix流
+hystrix:
+  stream:
+    queue:
+      destination: ${system.message.turbine}
+#turbine配置
+turbine:
+  stream:
+    destination: ${system.message.turbine}
 
 logging:
   level:

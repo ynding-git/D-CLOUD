@@ -29,6 +29,7 @@ public class TrackingFilter extends ZuulFilter {
         return FILTER_ORDER;
     }
 
+    @Override
     public boolean shouldFilter() {
         return SHOULD_FILTER;
     }
@@ -45,6 +46,7 @@ public class TrackingFilter extends ZuulFilter {
         return java.util.UUID.randomUUID().toString();
     }
 
+    @Override
     public Object run() {
 
         if (isCorrelationIdPresent()) {

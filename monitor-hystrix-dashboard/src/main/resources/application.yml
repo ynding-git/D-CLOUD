@@ -13,14 +13,14 @@ spring:
   application:
     name: hystrix-dashboard
   zipkin:
-    base-url: http://192.168.19.130:9411
+    base-url: http://101.37.202.3:9411
     sender:
       type: rabbit
   sleuth:
     sampler:
       probability: 1.0 #采样比例
   rabbitmq:
-    host: ${RABBIT_MQ_HOST:192.168.19.130}
+    host: ${RABBIT_MQ_HOST:101.37.202.3}
     port: ${RABBIT_MQ_PORT:5672}
     username: ${RABBIT_MQ_USERNAME:guest}
     password: ${RABBIT_MQ_PASSWORD:guest}
