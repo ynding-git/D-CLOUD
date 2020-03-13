@@ -65,3 +65,17 @@ logging:
     com.ynding.cloud.book: debug
     org.hibernate.SQL: WARN
     org.springframework.web: WARN
+
+fdfs:
+  soTimeout: 1500
+  connectTimeout: 600
+  thumbImage:
+    width: 150
+    height: 150
+  trackerList:
+    - ${TRACKER_HOST:101.37.202.3}:22122
+  pool:
+    jmx-enabled: false
+
+imageUrl:
+  prefix: http://101.37.202.3/

@@ -1,5 +1,7 @@
 package com.ynding.cloud.book.controller;
 
+import com.github.tobato.fastdfs.domain.fdfs.StorePath;
+import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import com.ynding.cloud.book.service.BookService;
 import com.ynding.cloud.common.model.bo.GQuery;
 import com.ynding.cloud.common.model.bo.ResponseBean;
@@ -7,9 +9,13 @@ import com.ynding.cloud.common.model.entity.book.Book;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FilenameUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -26,9 +32,13 @@ import java.util.Objects;
 public class BookController {
 
 	private final BookService bookService;
+	private final FastFileStorageClient fastFileStorageClient;
+	@Value("${imageUrl.prefix}")
+	private String imageUrl;
 
-	public BookController(BookService bookService) {
+	public BookController(BookService bookService, FastFileStorageClient fastFileStorageClient) {
 		this.bookService = Objects.requireNonNull(bookService);
+		this.fastFileStorageClient = fastFileStorageClient;
 	}
 
 	@PostMapping("/insert")
@@ -58,4 +68,16 @@ public class BookController {
 		return ResponseBean.ok(page);
 	}
 
+	@PostMapping("/picture")
+	@ApiOperation(value = "图片上传", produces = "application/json")
+	public ResponseBean picture(@RequestParam("file") MultipartFile file) {
+		try {
+			StorePath storePath = fastFileStorageClient.uploadFile(file.getInputStream(), file.getSize(), FilenameUtils.getExtension(file.getOriginalFilename()), null);
+			String filepath = imageUrl + storePath.getFullPath();
+			return ResponseBean.ok(filepath);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return ResponseBean.fail("上传失败",400);
+	}
 }

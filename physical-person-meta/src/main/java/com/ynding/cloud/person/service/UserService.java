@@ -47,10 +47,12 @@ public class UserService {
      */
     private Query condition(GQuery gquery) {
         Query query = new Query();
-        if (gquery.get("age") != null)
+        if (gquery.get("age") != null){
             query.addCriteria(Criteria.where("age").is(gquery.get("age")));
-        if (gquery.get("username") != null)
+        }
+        if (gquery.get("username") != null) {
             query.addCriteria(Criteria.where("username").regex(".*?" + gquery.get("username") + ".*"));
+        }
         return query;
     }
 }

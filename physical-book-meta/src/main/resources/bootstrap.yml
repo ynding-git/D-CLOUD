@@ -41,4 +41,10 @@ spring:
     schema: classpath:h2/schema.sql
     data: classpath:h2/test-data.sql
 
+  #没有用到mongodb，但是公共包添加了依赖，想想怎么优化一下依赖
+  data:
+    mongodb:
+      uri: mongodb://101.37.202.3/test
+      port: 27017
+
 hello: 111 #会被从github上的获得属性覆盖
