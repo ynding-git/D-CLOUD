@@ -2,7 +2,7 @@ package com.ynding.cloud.person.controller;
 
 import com.ynding.cloud.common.model.bo.ResponseBean;
 import com.ynding.cloud.common.model.entity.book.Book;
-import com.ynding.cloud.person.feign.BookClient;
+import com.ynding.cloud.person.clients.BookClient;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;

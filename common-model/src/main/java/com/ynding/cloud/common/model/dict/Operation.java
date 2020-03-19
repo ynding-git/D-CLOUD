@@ -18,21 +18,25 @@ import static java.util.stream.Collectors.toMap;
 public enum Operation {
 
     PLUS("+") {
+        @Override
         public double apply(double x, double y) {
             return x + y;
         }
     },
     MINUS("-") {
+        @Override
         public double apply(double x, double y) {
             return x - y;
         }
     },
     TIMES("*") {
+        @Override
         public double apply(double x, double y) {
             return x * y;
         }
     },
     DIVIDE("/") {
+        @Override
         public double apply(double x, double y) {
             return x / y;
         }
@@ -58,9 +62,10 @@ public enum Operation {
     public static void main(String[] args) {
         double x = 2;
         double y = 3;
-        for (Operation op : Operation.values())
+        for (Operation op : Operation.values()) {
             System.out.printf("%f %s %f = %f%n",
                     x, op, y, op.apply(x, y));
+        }
 
         System.out.println(fromString("+"));
     }
