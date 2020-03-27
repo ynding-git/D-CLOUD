@@ -46,3 +46,8 @@ spring:
     mongodb:
       uri: mongodb://101.37.202.3/test
       port: 27017
+
+  datasource:
+    url: jdbc:mysql://101.37.202.3:3306/d_cloud?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: Mysql12#

@@ -25,6 +25,15 @@ spring:
       enabled: true
       processor:
         enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
 
 #这样才能访问 /actuator/bus-refresh
 management:
