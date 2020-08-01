@@ -22,6 +22,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+        <fastdfs.version>1.26.7</fastdfs.version>
+        <asynchttpclient.version>2.4.4</asynchttpclient.version>
     </properties>
 
     <dependencyManagement>
@@ -128,7 +130,7 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.1.0</version>
+            <version>4.3.1</version>
         </dependency>
         <!--测试框架-->
         <dependency>
