@@ -1,7 +1,7 @@
 package com.ynding.cloud.person.service;
 
 import com.ynding.cloud.common.model.bo.GQuery;
-import com.ynding.cloud.common.model.entity.person.User;
+import com.ynding.cloud.person.entity.User;
 import com.ynding.cloud.person.data.UserRepository;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

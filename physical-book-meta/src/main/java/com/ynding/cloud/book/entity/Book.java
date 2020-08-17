@@ -1,8 +1,9 @@
-package com.ynding.cloud.common.model.entity.book;
+package com.ynding.cloud.book.entity;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -15,6 +16,7 @@ import java.io.Serializable;
 @Data
 @Entity
 @ApiModel(value = "Book", description = "书籍")
+@RestResource(rel = "books", path = "books")
 @Table(name = "t_book")
 public class Book implements Serializable {
 	

@@ -24,7 +24,7 @@ import java.util.List;
 @EnableHystrix
 @EnableMongoAuditing
 @EnableTransactionManagement
-@EntityScan("com.ynding.cloud.common.model.entity.person")
+@EntityScan("com.ynding.cloud.person.entity")
 //@EnableMongoRepositories(basePackages="com.ynding.cloud.person.data")
 public class PhysicalPersonMetaApplication {
 

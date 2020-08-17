@@ -1,6 +1,6 @@
 package com.ynding.cloud.person.data;
 
-import com.ynding.cloud.common.model.entity.person.Person;
+import com.ynding.cloud.person.entity.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

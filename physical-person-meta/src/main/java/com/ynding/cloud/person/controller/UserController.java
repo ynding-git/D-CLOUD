@@ -2,7 +2,7 @@ package com.ynding.cloud.person.controller;
 
 import com.ynding.cloud.common.model.bo.GQuery;
 import com.ynding.cloud.common.model.bo.ResponseBean;
-import com.ynding.cloud.common.model.entity.person.User;
+import com.ynding.cloud.person.entity.User;
 import com.ynding.cloud.person.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

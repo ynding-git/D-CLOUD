@@ -1,23 +1,17 @@
 package com.ynding.cloud.person.service;
 
 import com.ynding.cloud.common.model.bo.GQuery;
-import com.ynding.cloud.common.model.bo.ResponseBean;
-import com.ynding.cloud.common.model.entity.book.Book;
-import com.ynding.cloud.common.model.entity.person.Person;
-import com.ynding.cloud.common.model.entity.person.User;
+import com.ynding.cloud.common.model.vo.PersonVO;
 import com.ynding.cloud.person.data.PersonRepository;
+import com.ynding.cloud.person.entity.Person;
+import org.springframework.beans.BeanUtils;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author ynding
@@ -32,13 +26,21 @@ public class PersonService {
         this.personRepository = personRepository;
     }
 
-    public Person save(Person person) {
+    public Person save(PersonVO personVO) {
+        Person person = new Person();
+        BeanUtils.copyProperties(personVO, person);
         return personRepository.save(person);
     }
 
-    public List<Person> findList(GQuery query) {
+    public List<PersonVO> findList(GQuery query) {
         List<Person> persons = personRepository.findAll(condition(query));
-        return persons;
+        List<PersonVO> personVOS = new ArrayList<>();
+        persons.forEach(e -> {
+            PersonVO personVO = new PersonVO();
+            BeanUtils.copyProperties(e, personVO);
+            personVOS.add(personVO);
+        });
+        return personVOS;
     }
 
     /**

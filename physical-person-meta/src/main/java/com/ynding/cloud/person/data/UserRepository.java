@@ -1,6 +1,6 @@
 package com.ynding.cloud.person.data;
 
-import com.ynding.cloud.common.model.entity.person.User;
+import com.ynding.cloud.person.entity.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**

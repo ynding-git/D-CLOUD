@@ -1,7 +1,7 @@
 package com.ynding.cloud.person.controller;
 
 import com.ynding.cloud.common.model.bo.ResponseBean;
-import com.ynding.cloud.common.model.entity.book.Book;
+import com.ynding.cloud.common.model.vo.BookVO;
 import com.ynding.cloud.person.clients.BookClient;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -32,7 +32,7 @@ public class BookController {
 
     @PostMapping("/add/book")
     @ApiOperation(value = "添加书本", produces = "application/json")
-    public ResponseBean saveBook(@RequestBody Book book) {
+    public ResponseBean saveBook(@RequestBody BookVO book) {
 
         return bookClient.saveBook(book);
     }

@@ -1,7 +1,7 @@
 package com.ynding.cloud.person.clients.fallback;
 
 import com.ynding.cloud.common.model.bo.ResponseBean;
-import com.ynding.cloud.common.model.entity.book.Book;
+import com.ynding.cloud.common.model.vo.BookVO;
 import com.ynding.cloud.person.clients.BookClient;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +23,7 @@ public class BookClientImpl implements BookClient {
     }
 
     @Override
-    public ResponseBean saveBook(Book book) {
+    public ResponseBean saveBook(BookVO book) {
         return ResponseBean.fail(BOOK_FEIGN_ERROR);
     }
 }

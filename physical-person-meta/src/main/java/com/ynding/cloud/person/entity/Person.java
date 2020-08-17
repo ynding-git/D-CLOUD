@@ -1,4 +1,4 @@
-package com.ynding.cloud.common.model.entity.person;
+package com.ynding.cloud.person.entity;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -6,13 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Table
 @Data
 @Entity
 @ApiModel(value = "Person", description = "人员")
 @NoArgsConstructor
-public class Person {
+public class Person implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @ApiModelProperty(name = "id", notes = "ID", dataType = "long")

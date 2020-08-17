@@ -2,8 +2,8 @@ package com.ynding.cloud.person.controller;
 
 import com.ynding.cloud.common.model.bo.GQuery;
 import com.ynding.cloud.common.model.bo.ResponseBean;
-import com.ynding.cloud.common.model.entity.person.Person;
-import com.ynding.cloud.common.model.entity.person.User;
+import com.ynding.cloud.common.model.vo.PersonVO;
+import com.ynding.cloud.person.entity.Person;
 import com.ynding.cloud.person.service.PersonService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -29,7 +29,7 @@ public class PersonController {
 
     @PostMapping("/add")
     @ApiOperation(value = "添加人员", produces = "application/json")
-    public ResponseBean save(@RequestBody Person person) {
+    public ResponseBean save(@RequestBody PersonVO person) {
         personService.save(person);
         return ResponseBean.ok(1);
     }

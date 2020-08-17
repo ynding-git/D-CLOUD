@@ -5,7 +5,9 @@ import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import com.ynding.cloud.book.service.BookService;
 import com.ynding.cloud.common.model.bo.GQuery;
 import com.ynding.cloud.common.model.bo.ResponseBean;
-import com.ynding.cloud.common.model.entity.book.Book;
+import com.ynding.cloud.book.entity.Book;
+import com.ynding.cloud.common.model.bo.ResponsePageBean;
+import com.ynding.cloud.common.model.vo.BookVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -43,9 +45,9 @@ public class BookController {
 
 	@PostMapping("/insert")
 	@ApiOperation(value = "添加书本", produces = "application/json")
-    public ResponseBean insert(@RequestBody Book book){
+    public ResponseBean insert(@RequestBody BookVO bookVO){
 
-		bookService.save(book);
+		bookService.save(bookVO);
 		return ResponseBean.ok(1);
 	}
 
@@ -54,18 +56,16 @@ public class BookController {
 	public ResponseBean findList(@RequestParam Map<String, Object> params){
 
 	    GQuery query = new GQuery(params);
-	    List<Book> books = bookService.findList(query);
+	    List<BookVO> books = bookService.findList(query);
 
 		return ResponseBean.ok(books);
 	}
 
 	@GetMapping("/page")
 	@ApiOperation(value = "分页查询", produces = "application/json")
-	public ResponseBean findPage(@RequestParam Map<String, Object> params){
+	public ResponsePageBean findPage(@RequestParam Map<String, Object> params){
 		GQuery query = new GQuery(params);
-		Page<Book> page = bookService.pageList(query);
-
-		return ResponseBean.ok(page);
+		return bookService.pageList(query);
 	}
 
 	@PostMapping("/picture")

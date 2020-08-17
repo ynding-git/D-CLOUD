@@ -2,7 +2,10 @@ package com.ynding.cloud.book.service;
 
 import com.ynding.cloud.book.data.BookRepository;
 import com.ynding.cloud.common.model.bo.GQuery;
-import com.ynding.cloud.common.model.entity.book.Book;
+import com.ynding.cloud.book.entity.Book;
+import com.ynding.cloud.common.model.bo.ResponsePageBean;
+import com.ynding.cloud.common.model.vo.BookVO;
+import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -15,6 +18,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -37,7 +41,9 @@ public class BookService {
     }
 
     @Transactional(readOnly = false)
-    public Book save(Book book) {
+    public Book save(BookVO bookVO) {
+        Book book = new Book();
+        BeanUtils.copyProperties(bookVO,book);
         return bookRepository.save(book);
     }
 
@@ -47,9 +53,15 @@ public class BookService {
      * @param query
      * @return
      */
-    public List<Book> findList(GQuery query) {
+    public List<BookVO> findList(GQuery query) {
         List<Book> books = bookRepository.findAll(condition(query));
-        return books;
+        List<BookVO> bookVOS = new ArrayList<>();
+        books.forEach(e -> {
+            BookVO bookVO = new BookVO();
+            BeanUtils.copyProperties(e, bookVO);
+            bookVOS.add(bookVO);
+        });
+        return bookVOS;
     }
 
     /**
@@ -58,12 +70,20 @@ public class BookService {
      * @param query
      * @return
      */
-    public Page<Book> pageList(GQuery query) {
+    public ResponsePageBean pageList(GQuery query) {
         Pageable pageable =  PageRequest.of(query.getOffset(), query.getLimit(), Sort.Direction.DESC, "id");
 
         Page<Book> page = bookRepository.findAll(condition(query),pageable);
 
-        return page;
+        List<Book> books = page.getContent();
+        List<BookVO> bookVOS = new ArrayList<>();
+        books.forEach(e -> {
+            BookVO bookVO = new BookVO();
+            BeanUtils.copyProperties(e, bookVO);
+            bookVOS.add(bookVO);
+        });
+
+        return ResponsePageBean.ok(bookVOS, page.getTotalElements());
     }
 
 

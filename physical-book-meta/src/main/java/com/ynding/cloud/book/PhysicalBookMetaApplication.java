@@ -19,7 +19,7 @@ import java.util.List;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-@EntityScan("com.ynding.cloud.common.model.entity.book")
+@EntityScan("com.ynding.cloud.book.entity")
 @EnableTransactionManagement
 @EnableBinding(Source.class)//绑定消息代理
 public class PhysicalBookMetaApplication {

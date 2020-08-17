@@ -19,7 +19,10 @@ spring:
         show_sql: true
         use_sql_comments: true
         format_sql: true
-
+  # rest 链路前缀
+  data:
+    rest:
+      base-path: /api
 feign:
   httpclient:
     enabled: false
