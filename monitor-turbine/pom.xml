@@ -18,7 +18,7 @@
         <!--集群监控-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-turbine-stream</artifactId>
+            <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
         </dependency>
         <!-- mq -->
         <dependency>

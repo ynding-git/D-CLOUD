@@ -57,16 +57,12 @@ management:
     hystrix:
       stream:
         enabled: false
-#采集
-#hystrix流
-hystrix:
-  stream:
-    queue:
-      destination: ${system.message.turbine}
 #turbine配置
 turbine:
-  stream:
-    destination: ${system.message.turbine}
+  # 聚合的服务流
+  app-config: physical-book-meta,physical-person-meta
+  # 表明Turbine会收集名为default的集群中的所有聚合流
+  cluster-name-expression: "'default'"
 
 logging:
   level:
