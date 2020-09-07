@@ -96,14 +96,18 @@ public class BookService {
 
         return (Root<Book> root, CriteriaQuery<?> cq, CriteriaBuilder cb) -> {
             Predicate predicate = cb.conjunction();
-            if (query.get("author") != null)
+            if (query.get("author") != null) {
                 predicate.getExpressions().add(cb.equal(root.get("author"), query.get("author")));
-            if (query.get("reader") != null)
+            }
+            if (query.get("reader") != null) {
                 predicate.getExpressions().add(cb.equal(root.get("reader"), query.get("reader")));
-            if (query.get("description") != null)
+            }
+            if (query.get("description") != null) {
                 predicate.getExpressions().add(cb.like(root.get("description"), "%" + query.get("description") + "%"));
-            if (query.get("title") != null)
+            }
+            if (query.get("title") != null) {
                 predicate.getExpressions().add(cb.like(root.get("title"), "%" + query.get("title") + "%"));
+            }
 
             return predicate;
         };

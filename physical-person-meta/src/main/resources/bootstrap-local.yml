@@ -1,17 +1,17 @@
 #eureka配置需放在bootstrap.yml中
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/
 
 spring:
   cloud:
     config:
       label: master
-      name: book
+      name: person
       profile: dev
       discovery:
         enabled: true
@@ -20,13 +20,13 @@ spring:
       trace:
         enabled: true #开启消息跟踪
   rabbitmq:
-    host: ${RABBIT_MQ_HOST:101.37.202.3}
+    host: ${RABBIT_MQ_HOST:localhost}
     port: ${RABBIT_MQ_PORT:5672}
     username: ${RABBIT_MQ_USERNAME:guest}
     password: ${RABBIT_MQ_PASSWORD:guest}
 
   zipkin:
-    base-url: http://101.37.202.3:9411
+    base-url: localhost:9411
     sender:
       type: rabbit
   sleuth:
@@ -36,15 +36,18 @@ spring:
     http:
       legacy:
         enabled: true
-  datasource:
-    #初始化数据结构/数据
-    schema: classpath:h2/schema.sql
-    data: classpath:h2/test-data.sql
-
-  #没有用到mongodb，但是公共包添加了依赖，想想怎么优化一下依赖
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    lettuce:
+      pool:
+        max-active: 300
   data:
     mongodb:
       uri: mongodb://101.37.202.3/test
       port: 27017
 
-hello: 111 #会被从github上的获得属性覆盖
+  datasource:
+    url: jdbc:mysql://101.37.202.3:3306/d_cloud?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: Mysql12#
