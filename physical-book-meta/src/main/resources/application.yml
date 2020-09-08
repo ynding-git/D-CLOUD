@@ -53,7 +53,7 @@ hystrix:
           thread:
             timeoutInMilliseconds: 10000
 
-#这样才能访问 /actuator/bus-refresh
+#这样才能访问 /actuator/bus-refresh，暴露所有端点
 management:
   endpoints:
     web:
@@ -62,6 +62,9 @@ management:
       cors:
         allowed-origins: "*"
         allowed-methods: "*"
+  endpoint:
+    health:
+      show-details: always #展示健康信息的细节
 
 logging:
   level:
