@@ -4,33 +4,24 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f70c72c9-916b-4c90-9bb4-24edf8cb0b69" name="Default" comment="版本自己控制">
-      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core-server-bus/src/main/resources/application-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core-server-config/src/main/resources/application-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core-server-eureka/src/main/resources/application-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid11792.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/src/main/resources/application-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor-turbine/src/main/resources/application-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/physical-book-meta/src/main/resources/bootstrap-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/physical-person-meta/src/main/resources/bootstrap-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route-server-zuul/src/main/resources/application-local.yml" afterDir="false" />
+    <list default="true" id="f70c72c9-916b-4c90-9bb4-24edf8cb0b69" name="Default" comment="profile配置">
+      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/Oauth2AuthServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/Oauth2WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/bootstrap-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/bootstrap-local.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/src/main/java/com/ynding/cloud/book/config/Oauth2ResourceServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/physical-book-meta/src/main/java/com/ynding/cloud/book/config/Oauth2WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/dict/Phase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/dict/Phase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core-server-bus/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-bus/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core-server-config/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-config/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core-server-eureka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core-server-eureka/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-hystrix-dashboard/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-hystrix-dashboard/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-turbine/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-turbine/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/physical-book-meta/src/main/java/com/ynding/cloud/book/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/physical-book-meta/src/main/java/com/ynding/cloud/book/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/physical-book-meta/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-book-meta/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/physical-book-meta/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-book-meta/src/main/resources/bootstrap-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/physical-person-meta/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-person-meta/src/main/resources/bootstrap-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route-server-zuul/src/main/java/com/ynding/cloud/route/zuul/filter/FilterUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/route-server-zuul/src/main/java/com/ynding/cloud/route/zuul/filter/FilterUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route-server-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/route-server-zuul/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/AuthServerAuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/AuthServerAuthenticationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/InspectHeaderFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/OAuth2Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/WebSecurityConfigurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application-local.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physical-book-meta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-book-meta/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +107,7 @@
     <property name="SearchEverywhereHistoryKey" value="ConfigurationPropertiesBean&#9;PSI&#9;JAVA://org.springframework.boot.context.properties.EnableConfigurationPropertiesImportSelector.ConfigurationPropertiesBeanRegistrar" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/route-server-zuul/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -124,25 +115,25 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.24414062" />
     <property name="project.structure.side.proportion" value="0.6627907" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ynding.cloud.auth.authentication.service" />
       <recent name="com.ynding.cloud.route.zuul.filter" />
       <recent name="com.ynding.cloud.person.config" />
       <recent name="com.ynding.cloud.book.config" />
       <recent name="com.ynding.cloud.book.entity" />
-      <recent name="com.ynding.cloud.book.data" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHome\git-fun\D-CLOUD\auth-server-authentication\src\main\java\com\ynding\cloud\auth\authentication\config" />
+      <recent name="E:\GitHome\git-fun\D-CLOUD\auth-server-authentication\src\main\resources" />
       <recent name="E:\GitHome\git-fun\D-CLOUD\route-server-zuul\src\main\resources" />
       <recent name="E:\GitHome\git-fun\D-CLOUD\physical-person-meta\src\main\resources" />
       <recent name="E:\GitHome\git-fun\D-CLOUD\physical-book-meta\src\main\resources" />
-      <recent name="E:\GitHome\git-fun\D-CLOUD\monitor-turbine\src\main\resources" />
-      <recent name="E:\GitHome\git-fun\D-CLOUD\monitor-hystrix-dashboard\src\main\resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -405,7 +396,12 @@
       <workItem from="1599131699281" duration="2267000" />
       <workItem from="1599193226867" duration="882000" />
       <workItem from="1599224244547" duration="2445000" />
-      <workItem from="1599460457327" duration="1749000" />
+      <workItem from="1599460457327" duration="1833000" />
+      <workItem from="1599466431593" duration="3353000" />
+      <workItem from="1599532269567" duration="870000" />
+      <workItem from="1599612210423" duration="5330000" />
+      <workItem from="1599639988305" duration="780000" />
+      <workItem from="1599642077020" duration="3645000" />
     </task>
     <task id="LOCAL-00001" summary="修改springboot版本和springCloud匹配">
       <created>1575949087952</created>
@@ -498,7 +494,28 @@
       <option name="project" value="LOCAL" />
       <updated>1597682301460</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="profile配置">
+      <created>1599463280321</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1599463280322</updated>
+    </task>
+    <task id="LOCAL-00015" summary="turbine配置修改修改">
+      <created>1599467664147</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1599467664147</updated>
+    </task>
+    <task id="LOCAL-00016" summary="actuator端点配置">
+      <created>1599532492254</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1599532492254</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,21 +560,36 @@
     <MESSAGE value="所有以来的版本号统一由父pom文件定义" />
     <MESSAGE value="版本自己控制" />
     <MESSAGE value="vo转换，entity包装，book增加rest链路，swagger升级3.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="vo转换，entity包装，book增加rest链路，swagger升级3.0" />
+    <MESSAGE value="profile配置" />
+    <MESSAGE value="turbine配置修改修改" />
+    <MESSAGE value="actuator端点配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="actuator端点配置" />
   </component>
   <component name="WindowStateProjectService">
     <state x="649" y="222" key="#CloudFoundry" timestamp="1596953928920">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="649" y="222" key="#CloudFoundry/0.0.1536.824@0.0.1536.824" timestamp="1596953928920" />
+    <state x="361" y="74" key="#Inspections" timestamp="1599647542532">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1599647542532" />
+    <state x="361" y="74" key="#Project_Structure" timestamp="1599463326117">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1599463326117" />
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599463242871">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1599463242871" />
-    <state x="317" y="9" key="CommitChangelistDialog2" timestamp="1597682294321">
+    <state x="317" y="9" key="CommitChangelistDialog2" timestamp="1599532490117">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="317" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597682294321" />
+    <state x="317" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599532490117" />
+    <state x="137" y="71" key="DiffContextDialog" timestamp="1599532438688">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="137" y="71" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1599532438688" />
     <state x="674" y="138" key="FileChooserDialogImpl" timestamp="1596715277466">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -602,22 +634,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="272" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599129410388" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1597682465168">
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1599532495210">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597682465168" />
-    <state x="461" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1599224244561">
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599532495210" />
+    <state x="461" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1599642231930">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="461" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1599224244561" />
+    <state x="461" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1599642231930" />
     <state x="564" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597454727868">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="564" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1597454727868" />
-    <state x="323" y="76" key="new project wizard" timestamp="1598537854514">
+    <state x="323" y="76" key="new project wizard" timestamp="1599647844454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="323" y="76" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1598537854514" />
+    <state x="323" y="76" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1599647844454" />
     <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1596283267578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -2,28 +2,25 @@ package com.ynding.cloud.auth.authentication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-import org.springframework.security.oauth2.provider.OAuth2Authentication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import java.util.HashMap;
-import java.util.Map;
-
+/**
+ * @author ynding
+ * @version 2020/09/09
+ */
 @SpringBootApplication
-@EnableResourceServer//资源服务器
-@EnableAuthorizationServer//身份认证服务器
-@RestController
+@EnableDiscoveryClient
 public class AuthServerAuthenticationApplication {
 
-    @RequestMapping(value = { "/user" }, produces = "application/json")
-    public Map<String, Object> user(OAuth2Authentication user) {
-        Map<String, Object> userInfo = new HashMap<>();
-        userInfo.put("user", user.getUserAuthentication().getPrincipal());
-        userInfo.put("authorities", AuthorityUtils.authorityListToSet(user.getUserAuthentication().getAuthorities()));
-        return userInfo;
+    /**
+     * passwordEncoder 配置在config类里报错循环依赖，暂时将其写在启动类里，不报错
+     * Spring 对密码加密的封装
+     */
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     public static void main(String[] args) {
