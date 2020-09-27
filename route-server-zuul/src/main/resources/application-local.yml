@@ -53,6 +53,15 @@ zuul:
         #- user  #根据用户控制需要Security支持，（一般不用）
         #- origin #根据客户端的ip控制
 
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-uri: http://localhost:10402/oauth/token_key #获取解析jwt，验签名key的路径
+    client:
+      client-id: gateway #获取验签key需要身份认证，这里是网关的clientId
+      client-secret: 123456 #获取验签key需要身份认证，这里是网关的secret
+
 #这样才能访问 /actuator/bus-refresh
 management:
   endpoints:

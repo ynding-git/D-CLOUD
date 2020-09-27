@@ -22,6 +22,13 @@
             <artifactId>spring-cloud-zuul-ratelimit</artifactId>
             <version>2.2.2.RELEASE</version>
         </dependency>
+
+        <!-- oauth2-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
