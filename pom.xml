@@ -41,7 +41,6 @@
     </dependencyManagement>
 
     <modules>
-        <module>common-model</module>
         <module>core-server-eureka</module>
         <module>core-server-config</module>
         <module>core-server-bus</module>

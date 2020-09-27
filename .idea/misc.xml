@@ -21,6 +21,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/auth-server-authentication/pom.xml" />
+        <option value="$PROJECT_DIR$/common-model/pom.xml" />
       </set>
     </option>
   </component>

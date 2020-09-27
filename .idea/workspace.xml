@@ -4,24 +4,19 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f70c72c9-916b-4c90-9bb4-24edf8cb0b69" name="Default" comment="profile配置">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/AuthServerAuthenticationApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/Oauth2AuthServerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/Oauth2WebSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/service/UserDetailsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/bootstrap-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/bootstrap-local.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/test/java/com/ynding/cloud/auth/authentication/AuthServerAuthenticationApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="f70c72c9-916b-4c90-9bb4-24edf8cb0b69" name="Default" comment="去除认证模块">
+      <change beforePath="$PROJECT_DIR$/common-model/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/bo/CloudServiceName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/bo/GQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/bo/IResponseCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/bo/ResponseBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/bo/ResponseCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/bo/ResponsePageBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/dict/Operation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/dict/PayrollDay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/dict/Phase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/vo/BookVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-model/src/main/java/com/ynding/cloud/common/model/vo/PersonVO.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -377,7 +372,7 @@
       <workItem from="1599612210423" duration="5330000" />
       <workItem from="1599639988305" duration="780000" />
       <workItem from="1599642077020" duration="3645000" />
-      <workItem from="1601172416248" duration="1232000" />
+      <workItem from="1601172416248" duration="1434000" />
     </task>
     <task id="LOCAL-00001" summary="修改springboot版本和springCloud匹配">
       <created>1575949087952</created>
@@ -491,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599532492254</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="去除认证模块">
+      <created>1601173746235</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1601173746235</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +540,8 @@
     <MESSAGE value="profile配置" />
     <MESSAGE value="turbine配置修改修改" />
     <MESSAGE value="actuator端点配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="actuator端点配置" />
+    <MESSAGE value="去除认证模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="去除认证模块" />
   </component>
   <component name="WindowStateProjectService">
     <state x="649" y="222" key="#CloudFoundry" timestamp="1596953928920">
@@ -557,10 +560,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1599463242871" />
-    <state x="317" y="9" key="CommitChangelistDialog2" timestamp="1599532490117">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="396" y="11" key="CommitChangelistDialog2" timestamp="1601173744391">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="317" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599532490117" />
+    <state x="396" y="11" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601173744391" />
     <state x="137" y="71" key="DiffContextDialog" timestamp="1599532438688">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -609,10 +613,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="272" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599129410388" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1599532495210">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="451" y="188" key="Vcs.Push.Dialog.v2" timestamp="1601173747815">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599532495210" />
+    <state x="451" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601173747815" />
     <state x="461" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1599642231930">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
