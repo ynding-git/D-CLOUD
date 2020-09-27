@@ -11,7 +11,6 @@
         <module name="physical-book-meta" />
         <module name="monitor-hystrix-dashboard" />
         <module name="route-server-zuul" />
-        <module name="core-server-bus" />
         <module name="monitor-turbine" />
         <module name="physical-person-meta" />
         <module name="core-server-config" />
@@ -21,6 +20,7 @@
       <module name="auth-server-authentication" target="1.8" />
       <module name="common-model" target="1.8" />
       <module name="commonmodel" target="1.8" />
+      <module name="core-server-bus" target="1.8" />
       <module name="data-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>

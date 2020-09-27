@@ -10,7 +10,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/core-server-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/core-server-config/pom.xml" />
-        <option value="$PROJECT_DIR$/core-server-bus/pom.xml" />
         <option value="$PROJECT_DIR$/monitor-hystrix-dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/physical-book-meta/pom.xml" />
         <option value="$PROJECT_DIR$/physical-person-meta/pom.xml" />
