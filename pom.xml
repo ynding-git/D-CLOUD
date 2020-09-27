@@ -50,7 +50,6 @@
         <module>physical-book-meta</module>
         <module>physical-person-meta</module>
         <module>route-server-zuul</module>
-        <module>auth-server-authentication</module>
     </modules>
 
     <!--<repositories>

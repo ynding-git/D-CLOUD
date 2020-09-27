@@ -3,6 +3,7 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auth-server-authentication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-server-authentication/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-model" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-model/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/core-server-bus" charset="UTF-8" />
@@ -27,6 +28,7 @@
     <file url="file://$PROJECT_DIR$/physical-person-meta/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/physical-person-meta/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/route-server-zuul/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/route-server-zuul/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

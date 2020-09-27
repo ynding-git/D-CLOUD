@@ -7,19 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="core-server-bus" />
         <module name="core-server-eureka" />
         <module name="physical-book-meta" />
+        <module name="common-model" />
         <module name="monitor-hystrix-dashboard" />
-        <module name="auth-server-authentication" />
         <module name="route-server-zuul" />
-        <module name="core-server-config" />
+        <module name="core-server-bus" />
         <module name="monitor-turbine" />
         <module name="physical-person-meta" />
-        <module name="common-model" />
+        <module name="core-server-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="auth-server-authentication" target="1.8" />
       <module name="commonmodel" target="1.8" />
       <module name="data-service" target="1.8" />
     </bytecodeTargetLevel>

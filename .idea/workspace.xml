@@ -5,23 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f70c72c9-916b-4c90-9bb4-24edf8cb0b69" name="Default" comment="profile配置">
-      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/Oauth2AuthServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/Oauth2WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/bootstrap-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/bootstrap-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/physical-book-meta/src/main/java/com/ynding/cloud/book/config/Oauth2ResourceServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/physical-book-meta/src/main/java/com/ynding/cloud/book/config/Oauth2WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/AuthServerAuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/AuthServerAuthenticationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/InspectHeaderFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/OAuth2Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/WebSecurityConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application-local.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/physical-book-meta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/physical-book-meta/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/AuthServerAuthenticationApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/Oauth2AuthServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config/Oauth2WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/service/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/bootstrap-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/main/resources/bootstrap-local.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-server-authentication/src/test/java/com/ynding/cloud/auth/authentication/AuthServerAuthenticationApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,24 +66,12 @@
       </set>
     </option>
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="E:\GitHome\git-fun\D-CLOUD\.idea" />
-      </set>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="E:\MvnRepo\mvn_cloud" />
         <option name="userSettingsFile" value="E:\MvnRepo\mvn_cloud\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1UmlgalUAU6h1vcaQ2gx6DkvC7P" />
@@ -94,7 +82,6 @@
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -104,10 +91,13 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="ConfigurationPropertiesBean&#9;PSI&#9;JAVA://org.springframework.boot.context.properties.EnableConfigurationPropertiesImportSelector.ConfigurationPropertiesBeanRegistrar" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/auth-server-authentication/src/main/java/com/ynding/cloud/auth/authentication/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -129,11 +119,11 @@
       <recent name="com.ynding.cloud.book.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ideaProject\D-CLOUD" />
       <recent name="E:\GitHome\git-fun\D-CLOUD\auth-server-authentication\src\main\java\com\ynding\cloud\auth\authentication\config" />
       <recent name="E:\GitHome\git-fun\D-CLOUD\auth-server-authentication\src\main\resources" />
       <recent name="E:\GitHome\git-fun\D-CLOUD\route-server-zuul\src\main\resources" />
       <recent name="E:\GitHome\git-fun\D-CLOUD\physical-person-meta\src\main\resources" />
-      <recent name="E:\GitHome\git-fun\D-CLOUD\physical-book-meta\src\main\resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -281,23 +271,8 @@
       <item itemvalue="Spring Boot.AuthServerAuthenticationApplication" />
     </list>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <option name="contentProportion" value="0.21516393" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\23290\AppData\Roaming\Subversion</configuration>
@@ -402,6 +377,7 @@
       <workItem from="1599612210423" duration="5330000" />
       <workItem from="1599639988305" duration="780000" />
       <workItem from="1599642077020" duration="3645000" />
+      <workItem from="1601172416248" duration="1232000" />
     </task>
     <task id="LOCAL-00001" summary="修改springboot版本和springCloud匹配">
       <created>1575949087952</created>
@@ -519,7 +495,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -536,13 +512,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="true" />
