@@ -45,29 +45,19 @@
         <module>core-server-config</module>
         <module>monitor-hystrix-dashboard</module>
         <module>monitor-turbine</module>
-        <module>physical-book-meta</module>
-        <module>physical-person-meta</module>
         <module>route-server-zuul</module>
     </modules>
 
-    <!--<repositories>
+    <repositories>
         <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/libs-milestone</url>
+            <id>spring-aliyun</id>
+            <name>Spring Aliyun</name>
+            <url>https://maven.aliyun.com/repository/public</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
         </repository>
     </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>repository.spring.release</id>
-            <name>Spring GA Repository</name>
-            <url>https://repo.spring.io/plugins-release/</url>
-        </pluginRepository>
-    </pluginRepositories>-->
 
     <dependencies>
         <!--自省和监控的集成功能-->
