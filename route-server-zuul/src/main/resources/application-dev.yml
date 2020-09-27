@@ -26,7 +26,12 @@ spring:
     port: ${RABBIT_MQ_PORT:5672}
     username: ${RABBIT_MQ_USERNAME:guest}
     password: ${RABBIT_MQ_PASSWORD:guest}
-
+  redis:
+    host: ${REDIS_HOST:101.37.202.3}
+    port: ${REDIS_PORT:6379}
+    lettuce:
+      pool:
+        max-active: 300
 zuul:
   ignored-services: '*'
   prefix: /api
