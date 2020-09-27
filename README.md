@@ -15,5 +15,8 @@ turbine 10105
 
 physical-book-meta 10201
 physical-person-meta 10202
+physical-order-meta 10203
 
 route-server-zuul 10301
+
+auth-server-authentication 10402
