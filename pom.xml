@@ -43,8 +43,6 @@
     <modules>
         <module>core-server-eureka</module>
         <module>core-server-config</module>
-        <module>monitor-hystrix-dashboard</module>
-        <module>monitor-turbine</module>
         <module>route-server-zuul</module>
     </modules>
 
