@@ -26,6 +26,7 @@
         <hasor.version>4.1.7</hasor.version>
         <graphql.tool.version>5.4.0</graphql.tool.version>
         <graphql.version>5.0.2</graphql.version>
+        <springboot-admin.version>2.2.2</springboot-admin.version>
     </properties>
 
     <dependencyManagement>
