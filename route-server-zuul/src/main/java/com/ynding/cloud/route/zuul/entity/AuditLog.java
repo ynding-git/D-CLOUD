@@ -1,5 +1,6 @@
 package com.ynding.cloud.route.zuul.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -24,7 +25,9 @@ import lombok.Data;
 @Data
 @Entity
 @ApiModel(value = "AuditLog", description = "审计日志")
-public class AuditLog {
+public class AuditLog implements Serializable {
+
+    private static final long serialVersionUID = -8875955313491898643L;
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

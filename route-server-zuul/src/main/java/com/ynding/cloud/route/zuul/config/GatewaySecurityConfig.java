@@ -45,6 +45,7 @@ public class GatewaySecurityConfig extends ResourceServerConfigurerAdapter {
                 .authorizeRequests()
                 //放过/token开头的请求，是在申请令牌
                 .antMatchers("/token/**").permitAll()
+                .antMatchers("/h2-console/**").permitAll()
                 .anyRequest()
                 /**
                  * 指定权限访问规则，permissionService需要自己实现，返回布尔值，true-能访问；false-无权限
