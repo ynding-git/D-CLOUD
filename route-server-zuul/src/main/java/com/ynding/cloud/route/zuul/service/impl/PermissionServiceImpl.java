@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * <p> </p>
  *
@@ -17,13 +19,14 @@ import javax.servlet.http.HttpServletRequest;
  * @since JDK 1.8
  */
 @Service
+@Slf4j
 public class PermissionServiceImpl implements IPermissionService {
 
     @Override
     public boolean hasPermission(HttpServletRequest request, Authentication authentication) {
         //查数据库、查redis、调远程服务、或者内存里面的权限信息
-        System.err.println(request.getRequestURI());
-        System.err.println(ReflectionToStringBuilder.toString(authentication));
+        log.error(request.getRequestURI());
+        log.error(ReflectionToStringBuilder.toString(authentication));
         //这里模拟,有一半的可能性访问失败，一半可能性成功
         return RandomUtils.nextInt() % 2 ==0;
     }

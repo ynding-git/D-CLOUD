@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Component
 public class MyKeyGen extends DefaultRateLimitKeyGenerator {
+
+
     public MyKeyGen(RateLimitProperties properties, RateLimitUtils rateLimitUtils){
         super(properties,rateLimitUtils);
     }

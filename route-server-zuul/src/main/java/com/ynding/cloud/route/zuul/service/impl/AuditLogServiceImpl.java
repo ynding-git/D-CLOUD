@@ -31,4 +31,9 @@ public class AuditLogServiceImpl implements IAuditLogService {
     public AuditLog updateById(AuditLog log) {
         return auditLogRepository.save(log);
     }
+
+    @Override
+    public AuditLog getById(Long auditLogId) {
+        return auditLogRepository.findById(auditLogId).orElse(null);
+    }
 }

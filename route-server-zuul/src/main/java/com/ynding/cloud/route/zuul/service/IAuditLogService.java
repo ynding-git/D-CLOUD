@@ -23,4 +23,12 @@ public interface IAuditLogService {
      * @return
      */
     AuditLog updateById(AuditLog log);
+
+    /**
+     * 根据id查询
+     * @param auditLogId
+     * @return
+     */
+    AuditLog getById(Long auditLogId);
+
 }

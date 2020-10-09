@@ -18,8 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * <p> 审计日志过滤器：
- * 流控 - 认证 - 审计 - 授权
- * 这里不要声名为spring的Component 如果声名了，springboot会自动把这个过滤器加在web过滤器链里，再自己配置其位置就会加两次。
+ * 流控 - 认证 - 审计 - 授权 这里不要声名为spring的Component 如果声名了，springboot会自动把这个过滤器加在web过滤器链里，再自己配置其位置就会加两次。
  * </p>
  *
  * @author dyn
@@ -46,13 +45,13 @@ public class GatewayAuditLogFilter extends OncePerRequestFilter {
         log.setPath(request.getRequestURI());
         log.setCreateTime(new Date());
         auditLogService.save(log);
-        System.err.println("1 记录日志 ：" + log.toString());
+        logger.error("1 记录日志 ：" + log.toString());
         //2,调用其他过滤器链
         filterChain.doFilter(request, response);
         //3,更新日志
         log.setUpdateTime(new Date());
         log.setStatus(response.getStatus());
         auditLogService.updateById(log);
-        System.err.println("3 更新日志 ：" + log.toString());
+        logger.error("3 更新日志 ：" + log.toString());
     }
 }
