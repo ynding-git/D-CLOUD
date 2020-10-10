@@ -52,10 +52,9 @@ zuul:
   routes: #路由的配置是个Map，可以配置多个
     physical-person-meta: /person/**
     physical-book-meta: /book/**
-    token:  #token结尾的请求，都转发到http://localhost:9090认证服务器地址
+    physical-order-meta: /order/**
+    token:  #token结尾的请求，都转发到http://localhost:10402 认证服务器地址
       url:  http://localhost:10402
-    order:  #order结尾的请求，都转发到http://localhost:9060 顶单服务
-      url:  http://localhost:10203
   sensitive-headers:  null  #设置敏感头设置为空，Authorization等请求头的请求，都往后转发
   ratelimit:
     enabled: true
