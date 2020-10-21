@@ -1,3 +1,4 @@
+/*
 package com.ynding.cloud.route.zuul.filter;
 
 import com.netflix.zuul.ZuulFilter;
@@ -20,26 +21,30 @@ import javax.servlet.http.HttpServletRequest;
 
 import lombok.extern.slf4j.Slf4j;
 
+*/
 /**
  * <p> OAuth认证过滤器</p>
  *
  * @author dyn
  * @version 2020/10/9
  * @since JDK 1.8
- */
+ *//*
+
 @Slf4j
 @Component
 public class OauthFilter extends ZuulFilter {
     private RestTemplate restTemplate = new RestTemplate();
 
-    /**
+    */
+/**
      * 过滤器类型：
      *  "pre"：在业务逻辑执行之前执行run()的逻辑
      *  "post"：在业务逻辑执行之后执行run()的逻辑
      *  "error"：在业务逻辑抛出异常执行run()的逻辑
      *  "route"：控制路由，一般不用这个，zuul已实现
      * @return
-     */
+     *//*
+
     @Override
     public String filterType() {
         return "pre";
@@ -50,10 +55,12 @@ public class OauthFilter extends ZuulFilter {
         return 1;
     }
 
-    /**
+    */
+/**
      * 是否过滤
      * @return
-     */
+     *//*
+
     @Override
     public boolean shouldFilter() {
         return true;
@@ -91,11 +98,13 @@ public class OauthFilter extends ZuulFilter {
         return null;
     }
 
-    /**
+    */
+/**
      * 去认证服务器校验token
      * @param authHeader
      * @return
-     */
+     *//*
+
     private TokenInfo getTokenInfo(String authHeader) {
 
         //截取请求头里的bearer token，TODO：注意，Bearer是大写？还是小写？postman是大写
@@ -121,3 +130,4 @@ public class OauthFilter extends ZuulFilter {
         return response.getBody();
     }
 }
+*/

@@ -1,5 +1,7 @@
 package com.ynding.cloud.route.zuul.config;
 
+import com.ynding.cloud.route.zuul.GatewayAccessDeniedHandler;
+import com.ynding.cloud.route.zuul.GatewayAuthenticationEntryPoint;
 import com.ynding.cloud.route.zuul.GatewayWebSecurityExpressionHandler;
 import com.ynding.cloud.route.zuul.filter.GatewayAuditLogFilter;
 import com.ynding.cloud.route.zuul.service.IAuditLogService;
@@ -28,13 +30,23 @@ public class GatewaySecurityConfig extends ResourceServerConfigurerAdapter {
 
     @Autowired
     private IAuditLogService auditLogService;
+    @Autowired
+    private GatewayAccessDeniedHandler accessDeniedHandler;
+    @Autowired
+    private GatewayAuthenticationEntryPoint authenticationEntryPoint;
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         //配置资源服务器的id，“现在我就是资源服务器 gateway-server！！！”
         resources.resourceId("gateway-server");
-        //注入自己的 表达式处理器
-        resources.expressionHandler(gatewayWebSecurityExpressionHandler);
+
+        resources
+                //自定义处理401
+                .authenticationEntryPoint(authenticationEntryPoint)
+                //自定义403没有权限的处理逻辑
+                .accessDeniedHandler(accessDeniedHandler)
+                //注入自己的 表达式处理器
+                .expressionHandler(gatewayWebSecurityExpressionHandler);
     }
 
     @Override

@@ -3,7 +3,6 @@ package com.ynding.cloud.route.zuul.service.impl;
 import com.ynding.cloud.route.zuul.service.IPermissionService;
 
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang.math.RandomUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +27,7 @@ public class PermissionServiceImpl implements IPermissionService {
         log.error(request.getRequestURI());
         log.error(ReflectionToStringBuilder.toString(authentication));
         //这里模拟,有一半的可能性访问失败，一半可能性成功
-        return RandomUtils.nextInt() % 2 ==0;
+//        return RandomUtils.nextInt() % 2 ==0;
+        return true;
     }
 }

@@ -1,3 +1,4 @@
+/*
 package com.ynding.cloud.route.zuul.filter;
 
 import com.marcosbarbero.cloud.autoconfigure.zuul.ratelimit.config.RateLimitUtils;
@@ -9,13 +10,15 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 
+*/
 /**
  * <p>自定义限流key生成规则，自定义限流规则 </p>
  *
  * @author dyn
  * @version 2020/9/30
  * @since JDK 1.8
- */
+ *//*
+
 @Component
 public class MyKeyGen extends DefaultRateLimitKeyGenerator {
 
@@ -30,3 +33,4 @@ public class MyKeyGen extends DefaultRateLimitKeyGenerator {
         return super.key(request, route, policy);
     }
 }
+*/

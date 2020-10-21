@@ -1,3 +1,4 @@
+/*
 package com.ynding.cloud.route.zuul.filter;
 
 import com.netflix.zuul.ZuulFilter;
@@ -17,13 +18,15 @@ import javax.servlet.http.HttpServletRequest;
 
 import lombok.extern.slf4j.Slf4j;
 
+*/
 /**
  * <p>授权过滤器 </p>
  *
  * @author dyn
  * @version 2020/10/9
  * @since JDK 1.8
- */
+ *//*
+
 @Slf4j
 @Component
 public class AuthorizationFilter extends ZuulFilter {
@@ -99,20 +102,24 @@ public class AuthorizationFilter extends ZuulFilter {
     }
 
 
-    /**
+    */
+/**
      * 认证成功，看是否有权限 TODO：从数据库查询权限，这里直接返回
-     */
+     *//*
+
     private boolean hasPermission(TokenInfo tokenInfo, HttpServletRequest request) {
         //RandomUtils.nextInt() % 2 == 0;
         return true;
     }
 
 
-    /**
+    */
+/**
      * 处理认证失败或者没有权限
      *
      * @param status http状态码
-     */
+     *//*
+
     private void handleError(int status, RequestContext requestContext) {
         //响应json
         requestContext.getResponse().setContentType("application/json");
@@ -123,10 +130,13 @@ public class AuthorizationFilter extends ZuulFilter {
         requestContext.setSendZuulResponse(false);
     }
 
-    /**
+    */
+/**
      * 判断当前请求是否需要认证 TODO:查数据库判断权限
-     */
+     *//*
+
     private boolean isNeedAuth(HttpServletRequest request) {
         return true;
     }
 }
+*/
