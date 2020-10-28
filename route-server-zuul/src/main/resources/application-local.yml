@@ -66,7 +66,7 @@ zuul:
         refresh-interval: 10 #时间窗口 (in seconds)
         type: ##根据什么控制流量，可以组合使用，如url、httpmethod组合，就会把 /orders的get和post请求分开处理
           - url
-          - HTTPMETHOD
+          - httpmethod
         #- user  #根据用户控制需要Security支持，（一般不用）
         #- origin #根据客户端的ip控制
 
@@ -75,7 +75,7 @@ security:
     resource:
       jwt:
         key-uri: http://localhost:10402/oauth/token_key #获取解析jwt，验签名key的路径
-    client:
+    client: #定义了本服务的权限，client-id为gateway，说明本服务具有数据库中定义的gateway的权限，通过source_ids可查看能访问的其他服务，主要解决服务调用另一个服务的权限问题
       client-id: gateway #获取验签key需要身份认证，这里是网关的clientId
       client-secret: 123456 #获取验签key需要身份认证，这里是网关的secret
 

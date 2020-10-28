@@ -23,7 +23,7 @@ public class PermissionServiceImpl implements IPermissionService {
 
     @Override
     public boolean hasPermission(HttpServletRequest request, Authentication authentication) {
-        //查数据库、查redis、调远程服务、或者内存里面的权限信息
+        //查数据库、查redis、调远程服务、或者内存里面的权限信息 TODO
         log.error(request.getRequestURI());
         log.error(ReflectionToStringBuilder.toString(authentication));
         //这里模拟,有一半的可能性访问失败，一半可能性成功
