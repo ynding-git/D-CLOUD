@@ -43,9 +43,12 @@ public class GatewayAccessDeniedHandler  extends OAuth2AccessDeniedHandler {
             auditLogService.updateById(log);
         }
         //super.handle(request, response, authException); //默认处理
-        Map<String,Object> resultMap = new HashMap<>();
-        resultMap.put("status",403);
-        resultMap.put("msg","sorry! 403");
+        Map<String,Object> resultMap = new HashMap<String,Object>(2){
+            {
+                put("status",403);
+                put("msg","sorry! 403");
+            }
+        };
         response.getWriter().write(JSONUtil.toJsonStr(resultMap));
 
         //通知审计日志过滤器，403已经被处理过的标识，那里加个判断，否则就会更新两次
