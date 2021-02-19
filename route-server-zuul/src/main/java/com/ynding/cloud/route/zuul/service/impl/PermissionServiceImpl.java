@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * <p> </p>
+ * <p>权限控制实现类 </p>
  *
  * @author dyn
  * @version 2020/9/27

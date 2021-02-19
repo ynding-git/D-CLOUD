@@ -7,7 +7,7 @@ import com.ynding.cloud.route.zuul.service.IAuditLogService;
 import org.springframework.stereotype.Service;
 
 /**
- * <p> </p>
+ * <p> 日志服务</p>
  *
  * @author dyn
  * @version 2020/9/27
