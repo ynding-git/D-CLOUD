@@ -1,5 +1,5 @@
 server:
-  port: 10301
+  port: 10103
 
 eureka:
   instance:
@@ -57,13 +57,14 @@ zuul:
       url:  http://localhost:10402
   sensitive-headers:  null  #设置敏感头设置为空，Authorization等请求头的请求，都往后转发
   ratelimit:
+    key-prefix: rate
     enabled: true
     repository: REDIS
     default-policy-list:
       #    ########### 如下的配置就是说：每1秒内不能超过2个请求，2个请求时间加起来不能超过1秒(quota)############
       - limit: 2 #optional - request number limit per refresh interval window
         quota: 1 #optional - request time limit per refresh interval window (in seconds)
-        refresh-interval: 10 #时间窗口 (in seconds)，10s后恢复正常
+        refresh-interval: 3 #时间窗口 (in seconds)，3s后恢复正常
         type: ##根据什么控制流量，可以组合使用，如url、httpmethod组合，就会把 /orders的get和post请求分开处理
           - url
           - httpmethod

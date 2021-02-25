@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 /**
- * <p> </p>
+ * <p> 审计日志repository</p>
  *
  * @author dyn
  * @version 2020/9/27

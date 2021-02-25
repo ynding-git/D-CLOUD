@@ -1,8 +1,8 @@
 package com.ynding.cloud.route.zuul.config;
 
-import com.ynding.cloud.route.zuul.GatewayAccessDeniedHandler;
-import com.ynding.cloud.route.zuul.GatewayAuthenticationEntryPoint;
-import com.ynding.cloud.route.zuul.GatewayWebSecurityExpressionHandler;
+import com.ynding.cloud.route.zuul.security.GatewayAccessDeniedHandler;
+import com.ynding.cloud.route.zuul.security.GatewayAuthenticationEntryPoint;
+import com.ynding.cloud.route.zuul.security.GatewayWebSecurityExpressionHandler;
 import com.ynding.cloud.route.zuul.filter.GatewayAuditLogFilter;
 import com.ynding.cloud.route.zuul.service.IAuditLogService;
 

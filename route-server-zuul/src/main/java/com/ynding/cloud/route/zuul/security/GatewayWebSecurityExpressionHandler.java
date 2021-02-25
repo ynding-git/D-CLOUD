@@ -1,4 +1,4 @@
-package com.ynding.cloud.route.zuul;
+package com.ynding.cloud.route.zuul.security;
 
 import com.ynding.cloud.route.zuul.service.IPermissionService;
 

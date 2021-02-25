@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * <p> 审计日志</p>
+ * <p> 审计日志 entity</p>
  *
  * @author dyn
  * @version 2020/9/27
