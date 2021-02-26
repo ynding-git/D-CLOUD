@@ -53,6 +53,7 @@ zuul:
     physical-person-meta: /person/**
     physical-book-meta: /book/**
     physical-order-meta: /order/**
+    auth-server-authentication: /auth/**
     token:  #token结尾的请求，都转发到http://localhost:10402 认证服务器地址
       url:  http://localhost:10402
   sensitive-headers:  null  #设置敏感头设置为空，Authorization等请求头的请求，都往后转发
