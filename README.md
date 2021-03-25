@@ -6,6 +6,11 @@ kibana访问地址：http://localhost:5601，可以看到请求打印的日志
 
 grafana访问地址：http://localhost:3000，可以新增es数据源，出可视化的图表和监控
 
+## 分支版本
+master 
+v2.0
+
+
 ##端口
 core-server-eureka 10101
 core-server-config 10102
@@ -19,3 +24,6 @@ physical-person-meta 10202
 route-server-zuul 10103
 
 auth-server-authentication 10402
+
+monitor-springboot-admin 10501
+
