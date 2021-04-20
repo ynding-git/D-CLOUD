@@ -53,7 +53,7 @@
                 <version>1.2.0</version>
                 <configuration>
                     <!-- 镜像名,注意imageName一定要是符合正则[a-z0-9-_.]的，否则构建不会成功 -->
-                    <imageName>${project.artifactId}</imageName>
+                    <imageName>cloud/${project.artifactId}</imageName>
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
                     <rm>true</rm>
                     <resources>

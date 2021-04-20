@@ -1,0 +1,27 @@
+version: '3'
+services:
+  #注册中心
+  eureka-server:
+    image: cloud/core-server-eureka:latest
+    container_name: sc-eureka
+    restart: always
+    networks:
+      - sc-net
+    ports:
+      - 10101:10101
+    env_file: .env
+    environment:
+      TZ: Asia/Shanghai
+
+  #配置中心
+  config-server:
+    image: cloud/core-server-config:latest
+    container_name: sc-config
+    restart: always
+    networks:
+      - sc-net
+    ports:
+      - 10102:10102
+    env_file: .env
+    environment:
+      TZ: Asia/Shanghai

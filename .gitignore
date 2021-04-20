@@ -2,3 +2,8 @@
 .idea
 /D-CLOUD.iml
 /.idea/
+/data/rabbitmq/rabbit@09e3ad55eb60/
+/data/rabbitmq/rabbit@09e3ad55eb60-plugins-expand/
+/data/rabbitmq/rabbit@09e3ad55eb60.pid
+/data/redis/dump.rdb
+/data/mysql/
