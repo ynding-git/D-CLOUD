@@ -30,7 +30,7 @@ spring:
 #        encrypt.enabled: false
         git:
           skipSslValidation: true
-          uri: https://github.com/yahaweilian/cloud-config.git
+          uri: https://github.com/yaahw/cloud-config.git
           searchPaths: /
           # 对于使用git,svn做为后端配置，从远程库获取配置文件，需要存储到本地文件
           basedir: /tmp/spring-cloud-repo
