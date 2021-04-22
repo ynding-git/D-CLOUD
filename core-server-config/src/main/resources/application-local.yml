@@ -7,6 +7,7 @@ eureka:
 #    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
   client:
     serviceUrl:
+      #EUREKA_ZONE_HOST 对应.env 中的配置，docker会使用
       defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/
 
 spring:
