@@ -3,7 +3,8 @@ server:
 
 eureka:
   instance:
-    prefer-ip-address: true
+    hostname: eureka-server
+#    prefer-ip-address: true
   client:
     registerWithEureka: false #不注册自己
     fetchRegistry: false #不要在本地缓存注册表信息
