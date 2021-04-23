@@ -21,3 +21,7 @@ postgres、redis、rabbitmq
 ## 启动阿里注册中心
 
 `docker-compose -f docker-compose.yml -f docker-compose.nacos.yml up`
+
+## 启动auth中心
+
+`docker-compose -f docker-compose.yml -f docker-compose.auth.yml up`

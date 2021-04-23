@@ -20,6 +20,7 @@ spring:
     password: ${RABBIT_MQ_PASSWORD:guest}
   zipkin:
     base-url: http://101.37.202.3:9411
+    enabled: true
     sender:
       type: rabbit
   sleuth:

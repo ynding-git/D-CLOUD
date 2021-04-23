@@ -2,9 +2,9 @@ server:
   port: 10103
 
 eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id:  ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+#  instance:
+#    prefer-ip-address: true
+#    instance-id:  ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
   client:
     serviceUrl:
       defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/
@@ -13,7 +13,7 @@ spring:
   application:
     name: route-server-zuul
   zipkin:
-    base-url: localhost:9411
+#    base-url: localhost:9411
     enabled: true
     sender:
       type: rabbit

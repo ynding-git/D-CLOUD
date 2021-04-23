@@ -1,0 +1,27 @@
+version: '3'
+services:
+  #认证服务
+  authentication-server:
+    image: cloud/auth-server-authentication:latest
+    container_name: sc-authentication-server
+    restart: always
+    networks:
+      - sc-net
+    ports:
+      - 10402:10402
+    env_file: .env
+    environment:
+      TZ: Asia/Shanghai
+
+  #订单服务
+  order:
+    image: cloud/physical-order-meta:latest
+    container_name: sc-order
+    restart: always
+    networks:
+      - sc-net
+    ports:
+      - 10404:10404
+    env_file: .env
+    environment:
+      TZ: Asia/Shanghai

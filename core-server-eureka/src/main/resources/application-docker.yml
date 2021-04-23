@@ -2,8 +2,8 @@ server:
   port: ${EUREKA_PORT:10101}
 
 eureka:
-  instance:
-    prefer-ip-address: true
+#  instance:
+#    prefer-ip-address: true
   client:
     registerWithEureka: false #不注册自己
     fetchRegistry: false #不要在本地缓存注册表信息
@@ -19,7 +19,7 @@ spring:
     username: ${RABBIT_MQ_USERNAME:guest}
     password: ${RABBIT_MQ_PASSWORD:guest}
   zipkin:
-    base-url: localhost:9411
+#    base-url: localhost:9411 #docker不需要配置
     enabled: true
     sender:
       type: rabbit

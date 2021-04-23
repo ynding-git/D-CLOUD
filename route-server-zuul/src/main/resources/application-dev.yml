@@ -51,10 +51,9 @@ zuul:
   routes: #路由的配置是个Map，可以配置多个
     physical-person-meta: /person/**
     physical-book-meta: /book/**
-    token:  #token结尾的请求，都转发到http://localhost:9090认证服务器地址
-      url:  http://localhost:10402
-    order:  #order结尾的请求，都转发到http://localhost:9060 顶单服务
-      url:  http://localhost:10203
+    physical-order-meta: /order/**
+    token:  #token结尾的请求，都转发到http://localhost:10402认证服务器地址
+      url:  http://${AUTHENTICATION_HOST:localhost}:${AUTHENTICATION_PORT:10402}
   sensitive-headers:  null  #设置敏感头设置为空，Authorization等请求头的请求，都往后转发
   ratelimit:
     key-prefix: rate
@@ -75,7 +74,7 @@ security:
   oauth2:
     resource:
       jwt:
-        key-uri: http://localhost:10402/oauth/token_key #获取解析jwt，验签名key的路径
+        key-uri: http://${AUTHENTICATION_HOST:localhost}:${AUTHENTICATION_PORT:10402}/oauth/token_key #获取解析jwt，验签名key的路径
     client:
       client-id: gateway #获取验签key需要身份认证，这里是网关的clientId
       client-secret: 123456 #获取验签key需要身份认证，这里是网关的secret
