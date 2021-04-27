@@ -14,7 +14,7 @@ services:
       TZ: Asia/Shanghai
 
   #配置中心
-  config-server:
+  core-server-config:
     image: cloud/core-server-config:latest
     container_name: sc-config
     restart: always
@@ -25,3 +25,5 @@ services:
     env_file: .env
     environment:
       TZ: Asia/Shanghai
+    depends_on:
+      - eureka-server

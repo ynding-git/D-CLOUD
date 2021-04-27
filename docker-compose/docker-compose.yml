@@ -5,13 +5,15 @@ services:
     container_name: sc-redis
     restart: always
     volumes:
-      - ../data/redis:/data
-    environment:
-      - REDIS_PASSWORD=123456
+#      - ../data/redis:/data
+      - ./app/redis/redis.conf:/etc/redis/redis.conf
+    command: redis-server /etc/redis/redis.conf
+#    environment:
+#      - REDIS_PASSWORD=123456
     networks:
       - sc-net
     ports:
-      - 6379:6379
+      - 6380:6380
     env_file: .env
 
   rabbitmq:

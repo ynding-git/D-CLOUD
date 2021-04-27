@@ -2,9 +2,9 @@ server:
   port: 10102
 
 eureka:
-#  instance:
-#    prefer-ip-address: true
-#    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
   client:
     serviceUrl:
       #EUREKA_ZONE_HOST 对应.env 中的配置，docker会使用
@@ -32,8 +32,9 @@ spring:
 #        encrypt.enabled: false
         git:
           skipSslValidation: true
-          uri: https://github.com/yaahw/cloud-config.git
-          searchPaths: /
+#          uri: https://github.com/yaahw/cloud-config.git
+          uri: https://gitee.com/ynding/cloud-config.git
+          searchPaths: /**
           # 对于使用git,svn做为后端配置，从远程库获取配置文件，需要存储到本地文件
           basedir: /tmp/spring-cloud-repo
           # 配置中心通过git从远程git库，有时本地的拷贝被污染，这时配置中心无法从远程库更新本地配置,设置force-pull=true，则强制从远程库中更新本地库
