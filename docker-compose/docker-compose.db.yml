@@ -1,0 +1,70 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: sc-mysql
+    restart: always
+    networks:
+      - sc-net
+    ports:
+      - 3307:3306
+    volumes:
+      - ../data/mysql:/var/lib/mysql
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: root123
+
+  mysql-init:
+    image: mysql:5.7
+    command: /init-db.sh
+    networks:
+      - sc-net
+    volumes:
+      - ../db/auth:/sql/auth
+      - ../route-server-zuul/src/main/resources/h2:/sql/gateway
+      - ./init-db.sh:/init-db.sh
+    environment:
+      #init-db.sh中会使用
+      MYSQL_ROOT_PASSWORD: root123
+
+  mongodb:
+    image: mongo:3
+    container_name: sc-mongo
+    restart: always
+    networks:
+      - sc-net
+    volumes:
+      - ../data/mongo/db:/data/db
+      - ../data/mongo/log:/var/log/mongodb
+#      - ../data/mongo/lib:/var/lib/mongodb
+#      - ./app/mongodb/mongodb.conf:/etc/mongodb.conf
+#    command: mongod --config /etc/mongodb.conf
+    ports:
+      - 27017:27017
+    environment:
+      TZ: Asia/Shanghai
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: admin
+      MONGO_INITDB_DATABASE: test
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: sc-mongo-express
+    restart: always
+    networks:
+      - sc-net
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_OPTIONS_EDITORTHEME: ambiance
+      ME_CONFIG_MONGODB_SERVER: mongodb
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: admin
+      ME_CONFIG_BASICAUTH_USERNAME: web
+      ME_CONFIG_BASICAUTH_PASSWORD: web
+#      ME_CONFIG_MONGODB_ENABLE_ADMIN: "false"
+#      ME_CONFIG_MONGODB_AUTH_DATABASE: test
+#      ME_CONFIG_MONGODB_AUTH_USERNAME: root
+#      ME_CONFIG_MONGODB_AUTH_PASSWORD: admin
+    depends_on:
+      - mongodb

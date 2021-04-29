@@ -48,7 +48,7 @@ services:
 #    networks:
 #      - sc-net
 #    volumes:
-#      - ../auth/db:/sql/auth
+#      - ../db/auth:/sql/auth
 #      - ../route-server-zuul/src/main/resources/h2:/sql/gateway
 #      - ./init-db.sh:/init-db.sh
 #    environment:

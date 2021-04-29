@@ -25,3 +25,7 @@ postgres、redis、rabbitmq
 ## 启动auth中心
 
 `docker-compose -f docker-compose.yml -f docker-compose.auth.yml up`
+
+## 启动db中心
+
+`docker-compose -f docker-compose.yml -f docker-compose.db.yml up`
