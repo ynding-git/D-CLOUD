@@ -1,0 +1,29 @@
+version: '3'
+services:
+  #book服务
+  book-server:
+    image: cloud/physical-book-meta:latest
+    container_name: sc-book
+    restart: always
+    networks:
+      - sc-net
+    ports:
+      - 10201:10201
+    env_file: .env
+    environment:
+      TZ: Asia/Shanghai
+
+  #person服务
+  person-server:
+    image: cloud/physical-person-meta:latest
+    container_name: sc-person
+    restart: always
+    networks:
+      - sc-net
+    ports:
+      - 10202:10202
+    env_file: .env
+    environment:
+      TZ: Asia/Shanghai
+    depends_on:
+      - book-server

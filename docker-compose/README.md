@@ -29,3 +29,7 @@ postgres、redis、rabbitmq
 ## 启动db中心
 
 `docker-compose -f docker-compose.yml -f docker-compose.db.yml up`
+
+## 启动physical中心
+
+`docker-compose -f docker-compose.yml -f docker-compose.physical.yml up`

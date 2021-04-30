@@ -4,5 +4,5 @@ for file in $(find /sql -name "*.sql" -exec ls {} \;| grep -v postgres | sort | 
 do
     file=$(echo ${file} | tr '|' ' ')
     printf "Applying update ${file}\n"
-    mysql -uroot -p$MYSQL_ROOT_PASSWORD -h mysql < ${file}
+    mysql -uroot -p$MYSQL_ROOT_PASSWORD -h mysql-db < ${file}
 done

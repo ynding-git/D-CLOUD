@@ -21,18 +21,20 @@ services:
       - rabbitmq
 
   elasticsearch:
-    image: elasticsearch:5.6-alpine
+    image: elasticsearch:6.7.1
     container_name: sc-elasticsearch
     restart: always
     #Windows with Docker Desktop WSL2 Backend  cmd运行下面的命令扩充vm大小，否则报错
     #wsl -d docker-desktop
     #sysctl -w vm.max_map_count=262144
+    #sysctl vm.max_map_count 确认
     environment:
       - cluster.name=elasticsearch
       - bootstrap.memory_lock=true
       - xpack.security.enabled=false
       - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - node.name=elasticsearch_node_1
+      - TZ=Asia/Shanghai
     ulimits:
       memlock:
         soft: -1
