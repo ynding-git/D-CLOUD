@@ -1,17 +1,13 @@
-
-
 ## 启动基础服务
-
 postgres、redis、rabbitmq
- 
 `docker-compose up -d`
 
 ## 启动core组件
-
 `docker-compose -f docker-compose.yml -f docker-compose.core.yml up`
 
 ## 启动devops组件
-
+ 先启动elasticsearch，在启动其他服务：
+`docker-compose -f docker-compose.yml -f docker-compose.devops.yml up elasticsearch`
 `docker-compose -f docker-compose.yml -f docker-compose.devops.yml up`
 
 ## 启动Apollo配置中心

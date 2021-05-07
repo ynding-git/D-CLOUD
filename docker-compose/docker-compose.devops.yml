@@ -19,6 +19,7 @@ services:
       - ES_HOSTS=http://elasticsearch:9200
     depends_on:
       - rabbitmq
+      - elasticsearch
 
   elasticsearch:
     image: elasticsearch:6.7.1
@@ -81,7 +82,7 @@ services:
       collector.ribbon.listOfServers: skywalking-oap:12800
 
   kibana:
-    image: kibana:5.6.14
+    image: kibana:6.7.1
     container_name: sc-kibana
     restart: always
     volumes:
