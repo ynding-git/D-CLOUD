@@ -17,6 +17,7 @@ postgres、redis、rabbitmq
 ## 启动阿里注册中心
 
 `docker-compose -f docker-compose.yml -f docker-compose.nacos.yml up`
+访问http://localhost:8848/nacos ， 用户名/密码: nacos/nacos
 
 ## 启动auth中心
 
