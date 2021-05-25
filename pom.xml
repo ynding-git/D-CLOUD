@@ -109,10 +109,10 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <!--注册中心-->
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
+        </dependency>-->
         <!--nacos 服务发现和配置-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -156,15 +156,10 @@
             <version>1.18.8</version>
             <scope>compile</scope>
         </dependency>
-        <!--swagger2 -->
+        <!--swagger3 -->
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>3.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
+            <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
         </dependency>
         <!--hutool-->

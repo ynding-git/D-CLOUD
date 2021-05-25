@@ -7,8 +7,9 @@ kibana访问地址：http://localhost:5601，可以看到请求打印的日志
 grafana访问地址：http://localhost:3000，可以新增es数据源，出可视化的图表和监控
 
 ## 分支版本
-master 
-v2.0
+master  主干, 使用nacos替代eureka
+v2.0  使用 eureka
+v2.0.1 引入docker
 
 
 ##端口
