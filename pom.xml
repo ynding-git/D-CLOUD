@@ -9,11 +9,11 @@
     <version>2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <parent>
+   <!-- <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.2.RELEASE</version>
-    </parent>
+    </parent>-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,6 +32,14 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- 支持Spring Boot 2.1.X -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.2.2.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!-- spring cloud-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -206,6 +214,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.2.2.RELEASE</version>
                 <executions>
                     <execution>
                         <!-- 需加上repackage 否则docker 找不到jar包-->
