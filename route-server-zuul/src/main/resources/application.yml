@@ -1,36 +1,13 @@
 server:
   port: 10103
 
-eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id:  ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
-  client:
-    serviceUrl:
-      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/
-
 spring:
-  application:
-    name: route-server-zuul
-  zipkin:
-    base-url: localhost:9411
-    enabled: true
-    sender:
-      type: rabbit
-  sleuth:
-    sampler:
-      probability: 1.0
-  rabbitmq:
-    host: ${RABBIT_MQ_HOST:localhost}
-    port: ${RABBIT_MQ_PORT:5672}
-    username: ${RABBIT_MQ_USERNAME:guest}
-    password: ${RABBIT_MQ_PASSWORD:guest}
-  redis:
-    host: ${REDIS_HOST:localhost}
-    port: ${REDIS_PORT:6379}
-    lettuce:
-      pool:
-        max-active: 300
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    deserialization:
+      #允许对象忽略json中不存在的属性
+      fail_on_unknown_properties: false
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -44,7 +21,6 @@ spring:
     #初始化数据结构/数据
     schema: classpath:h2/schema.sql
     data: classpath:h2/test-data.sql
-
 zuul:
   ignored-services: '*'
   prefix: /api
@@ -52,8 +28,7 @@ zuul:
     physical-person-meta: /person/**
     physical-book-meta: /book/**
     physical-order-meta: /order/**
-    auth-server-authentication: /auth/**
-    token:  #token结尾的请求，都转发到http://localhost:10402 认证服务器地址
+    token:  #token结尾的请求，都转发到http://localhost:10402认证服务器地址
       url:  http://${AUTHENTICATION_HOST:localhost}:${AUTHENTICATION_PORT:10402}
   sensitive-headers:  null  #设置敏感头设置为空，Authorization等请求头的请求，都往后转发
   ratelimit:
@@ -64,7 +39,7 @@ zuul:
       #    ########### 如下的配置就是说：每1秒内不能超过2个请求，2个请求时间加起来不能超过1秒(quota)############
       - limit: 2 #optional - request number limit per refresh interval window
         quota: 1 #optional - request time limit per refresh interval window (in seconds)
-        refresh-interval: 3 #时间窗口 (in seconds)，3s后恢复正常
+        refresh-interval: 10 #时间窗口 (in seconds)
         type: ##根据什么控制流量，可以组合使用，如url、httpmethod组合，就会把 /orders的get和post请求分开处理
           - url
           - httpmethod
@@ -76,7 +51,7 @@ security:
     resource:
       jwt:
         key-uri: http://${AUTHENTICATION_HOST:localhost}:${AUTHENTICATION_PORT:10402}/oauth/token_key #获取解析jwt，验签名key的路径
-    client: #定义了本服务的权限，client-id为gateway，说明本服务具有数据库中定义的gateway的权限，通过source_ids可查看能访问的其他服务，主要解决服务调用另一个服务的权限问题
+    client:
       client-id: gateway #获取验签key需要身份认证，这里是网关的clientId
       client-secret: 123456 #获取验签key需要身份认证，这里是网关的secret
 

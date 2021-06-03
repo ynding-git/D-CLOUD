@@ -23,6 +23,7 @@ services:
     env_file: .env
     volumes:
       - ../db/auth:/sql/auth
+      - ../db/seata:/sql/seata
       - ../route-server-zuul/src/main/resources/h2:/sql/gateway
       - ./init-db.sh:/init-db.sh
     environment:

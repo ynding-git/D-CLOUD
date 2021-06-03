@@ -164,12 +164,6 @@
             <version>1.18.8</version>
             <scope>compile</scope>
         </dependency>
-        <!--swagger3 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-            <version>3.0.0</version>
-        </dependency>
         <!--hutool-->
         <dependency>
             <groupId>cn.hutool</groupId>
