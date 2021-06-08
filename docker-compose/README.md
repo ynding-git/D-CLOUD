@@ -20,7 +20,9 @@ postgres、redis、rabbitmq
 访问http://localhost:8848/nacos ， 用户名/密码: nacos/nacos
 
 ## 启动seata 事务管理服务
-docker-compose -f docker-compose.yml -f docker-compose.seata.yml up seata-server
+ 先运行脚本，将seata配置写入nacos：
+ sh nacos-config.sh -h localhost -u nacos -w nacos -t {nacos空间id}
+`docker-compose -f docker-compose.yml -f docker-compose.seata.yml up seata-server`
 
 ## 启动auth中心
 
