@@ -1,0 +1,74 @@
+server:
+  port: 10104
+
+spring:
+  application:
+    name: route-server-gateway
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    deserialization:
+      #允许对象忽略json中不存在的属性
+      fail_on_unknown_properties: false
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+  datasource:
+    #初始化数据结构/数据
+    schema: classpath:db/schema.sql
+    data: classpath:db/test-data.sql
+    initialization-mode: always
+    #不加此配置，如果sql 执行失败会中断程序，如果想看sql的执行错误，可以把此去掉
+    continue-on-error: true
+  cloud:
+    gateway:
+      default-filters:
+        - name: Retry
+          args:
+            retries: 3
+            statuses: BAD_GATEWAY
+        - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+        - name: RequestRateLimiter
+          args:
+            redis-rate-limiter.replenishRate: 2  #流速 每秒
+            redis-rate-limiter.burstCapacity: 10   #令牌桶的容积
+            rate-limiter: "#{@defaultRedisRateLimiter}"  #SPEL表达式去的对应的bean
+            key-resolver: "#{@apiKeyResolver}" #SPEL表达式去的对应的bean
+
+#网关白名单，无需要签权url
+gate:
+  ignore:
+    authentication:
+      startWith: /oauth,/open
+
+security:
+  oauth2:
+    resource:
+      jwt:
+#        key-uri: http://${AUTHENTICATION_HOST:localhost}:${AUTHENTICATION_PORT:10402}/oauth/token_key #获取解析jwt，验签名key的路径
+        key-value: 123456
+    client:
+      client-id: gateway #获取验签key需要身份认证，这里是网关的clientId
+      client-secret: 123456 #获取验签key需要身份认证，这里是网关的secret
+
+#这样才能访问 /actuator/bus-refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.ynding.cloud: DEBUG

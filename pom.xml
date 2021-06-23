@@ -9,11 +9,11 @@
     <version>2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-   <!-- <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.2.RELEASE</version>
-    </parent>-->
+    <!-- <parent>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-parent</artifactId>
+         <version>2.2.2.RELEASE</version>
+     </parent>-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,6 +28,8 @@
         <graphql.tool.version>5.4.0</graphql.tool.version>
         <graphql.version>5.0.2</graphql.version>
         <springboot-admin.version>2.2.2</springboot-admin.version>
+        <hutool.version>5.1.0</hutool.version>
+        <lombok.version>1.18.8</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -63,6 +65,7 @@
         <module>core-server-eureka</module>
         <module>core-server-config</module>
         <module>route-server-zuul</module>
+        <module>route-server-gateway</module>
     </modules>
 
     <repositories>
@@ -117,10 +120,10 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <!--注册中心-->
-       <!-- <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>-->
+        <!-- <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+         </dependency>-->
         <!--nacos 服务发现和配置-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -161,14 +164,14 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
+            <version>${lombok.version}</version>
             <scope>compile</scope>
         </dependency>
         <!--hutool-->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.1.0</version>
+            <version>${hutool.version}</version>
         </dependency>
         <!--测试框架-->
         <dependency>

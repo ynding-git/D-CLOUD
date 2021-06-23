@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        metadata:
+          management:
+            context-path: ${server.servlet.context-path}/actuator
+        server-addr: ${NACOS_HOST:localhost}:${NACOS_PORT:8848}
+        #nacos的命名空间ID，默认是public
+        namespace: ${NACOS_NAMESPACE:49dca007-be2d-4a01-bcbc-00c3318fb25f}
+        group: DEFAULT_GROUP
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        group: DEFAULT_GROUP
+        file-extension: yaml
+        #指定共享配置，且支持动态刷新
+        extension-configs:
+          - data-id: cloud-common.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
+          - data-id: cloud-mysql.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true

@@ -1,0 +1,37 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id:  ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:10101}/eureka/
+
+spring:
+  zipkin:
+#    base-url: localhost:9411
+    enabled: true
+    sender:
+      type: rabbit
+  sleuth:
+    sampler:
+      probability: 1.0
+  rabbitmq:
+    host: ${RABBIT_MQ_HOST:localhost}
+    port: ${RABBIT_MQ_PORT:5672}
+    username: ${RABBIT_MQ_USERNAME:guest}
+    password: ${RABBIT_MQ_PASSWORD:guest}
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:123456}
+    jedis:
+      pool:
+        ##最大连接数
+        max-active: 300
+        ##连接的最大等待阻塞的时间
+        max-wait: 10000
+        ##最大和最小空闲连接
+        max-idle: 4
+        min-idle: 0
+      ##连接超时的时间
+    timeout: 2000
