@@ -1,0 +1,14 @@
+version: '3'    # 定义版本，不指定默认为版本 1，新版本功能更多
+services: # 容器
+  jenkins:
+    image: 'jenkins/jenkins:lts'
+    container_name: jenkins         # 容器名称
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    volumes:
+#      - ../data/jenkins:/var/jenkins_home
+      - E:/jenkins:/var/jenkins_home

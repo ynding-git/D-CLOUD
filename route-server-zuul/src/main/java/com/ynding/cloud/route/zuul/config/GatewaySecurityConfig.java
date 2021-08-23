@@ -1,11 +1,10 @@
 package com.ynding.cloud.route.zuul.config;
 
-import com.ynding.cloud.route.zuul.security.GatewayAccessDeniedHandler;
-import com.ynding.cloud.route.zuul.security.GatewayAuthenticationEntryPoint;
-import com.ynding.cloud.route.zuul.security.GatewayWebSecurityExpressionHandler;
+import com.ynding.cloud.route.zuul.config.security.GatewayAccessDeniedHandler;
+import com.ynding.cloud.route.zuul.config.security.GatewayAuthenticationEntryPoint;
+import com.ynding.cloud.route.zuul.config.security.GatewayWebSecurityExpressionHandler;
 import com.ynding.cloud.route.zuul.filter.GatewayAuditLogFilter;
 import com.ynding.cloud.route.zuul.service.IAuditLogService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

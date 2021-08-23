@@ -1,4 +1,4 @@
-package com.ynding.cloud.route.gateway.config;
+package com.ynding.cloud.route.gateway.config.limiter;
 
 import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +20,6 @@ public class RequestRateLimiterConfig {
      * @return 限流key
      */
     @Bean
-    @Primary
     public KeyResolver remoteAddressKeyResolver() {
         return exchange -> Mono.just(exchange.getRequest().getRemoteAddress().getHostName());
     }
@@ -31,7 +30,9 @@ public class RequestRateLimiterConfig {
      * @return 限流key
      */
     @Bean
+    @Primary
     public KeyResolver apiKeyResolver() {
+        //按URL限流,即以每秒内请求数按URL分组统计，超出限流的url请求都将返回429状态
         return exchange -> Mono.just(exchange.getRequest().getPath().value());
     }
 

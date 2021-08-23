@@ -15,7 +15,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = "com.ynding.cloud.auth.api.authentication.client")
-@EnableCircuitBreaker
 public class RouteServerGatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(RouteServerGatewayApplication.class, args);

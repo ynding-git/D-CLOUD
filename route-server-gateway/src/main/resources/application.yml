@@ -28,6 +28,26 @@ spring:
     continue-on-error: true
   cloud:
     gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true  #gateway可以通过开启以下配置来打开根据服务的serviceId来匹配路由,默认是false大写
+          enabled: true # 是否可以通过其他服务的serviceId来转发到具体的服务实例。默认为false
+      routes:
+        - id: auth-server-authentication
+          uri: lb://auth-server-authentication
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+            # 限流过滤器，使用gateway内置令牌算法
+            - name: RequestRateLimiter
+              args:
+                # 令牌桶每秒填充平均速率,即行等价于允许用户每秒处理多少个请求平均数
+                redis-rate-limiter.replenishRate: 1
+                # 令牌桶的容量，允许在一秒钟内完成的最大请求数
+                redis-rate-limiter.burstCapacity: 2
+                # 用于限流的键的解析器的 Bean 对象的名字。它使用 SpEL 表达式根据#{@beanName}从 Spring 容器中获取 Bean 对象。
+                key-resolver: "#{@apiKeyResolver}"
       default-filters:
         - name: Retry
           args:

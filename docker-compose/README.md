@@ -11,11 +11,9 @@ postgres、redis、rabbitmq
 `docker-compose -f docker-compose.yml -f docker-compose.devops.yml up`
 
 ## 启动Apollo配置中心
-
 `docker-compose -f docker-compose.yml -f docker-compose.config.yml up`
 
 ## 启动阿里注册中心
-
 `docker-compose -f docker-compose.yml -f docker-compose.nacos.yml up`
 访问http://localhost:8848/nacos ， 用户名/密码: nacos/nacos
 
@@ -25,13 +23,13 @@ postgres、redis、rabbitmq
 `docker-compose -f docker-compose.yml -f docker-compose.seata.yml up seata-server`
 
 ## 启动auth中心
-
 `docker-compose -f docker-compose.yml -f docker-compose.auth.yml up`
 
 ## 启动db中心
-
 `docker-compose -f docker-compose.yml -f docker-compose.db.yml up`
 
 ## 启动physical中心
-
 `docker-compose -f docker-compose.yml -f docker-compose.physical.yml up`
+
+## 启动jenkins
+`docker-compose -f docker-compose.yml -f docker-compose.jenkins.yml up`

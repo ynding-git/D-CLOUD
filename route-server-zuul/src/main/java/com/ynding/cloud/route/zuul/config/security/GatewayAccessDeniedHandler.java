@@ -1,4 +1,4 @@
-package com.ynding.cloud.route.zuul.security;
+package com.ynding.cloud.route.zuul.config.security;
 
 import com.ynding.cloud.route.zuul.entity.AuditLog;
 import com.ynding.cloud.route.zuul.service.IAuditLogService;

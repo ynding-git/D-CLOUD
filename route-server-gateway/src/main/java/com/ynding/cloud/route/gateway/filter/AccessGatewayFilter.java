@@ -1,6 +1,8 @@
 package com.ynding.cloud.route.gateway.filter;
 
 import com.ynding.cloud.auth.api.authentication.service.IAuthService;
+import com.ynding.cloud.common.model.bo.AuthConstants;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,30 +14,24 @@ import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
-import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
  * 请求url权限校验
+ * @author ynding
  */
 @Configuration
 @ComponentScan(basePackages = "com.ynding.cloud.auth.api.authentication")
 @Slf4j
 public class AccessGatewayFilter implements GlobalFilter {
 
-    private final static String X_CLIENT_TOKEN_USER = "x-client-token-user";
-    private final static String X_CLIENT_TOKEN = "x-client-token";
-    private static final String BEARER = "Bearer";
     /**
      * 由authentication-client模块提供签权的feign客户端
      */
     @Autowired
     private IAuthService authService;
-
-    @Autowired
-    private OAuth2RestTemplate restTemplate;
 
     /**
      * 1.首先网关检查token是否有效，无效直接返回401，不调用签权服务
@@ -52,12 +48,12 @@ public class AccessGatewayFilter implements GlobalFilter {
         String method = request.getMethodValue();
         String url = request.getPath().value();
         log.debug("url:{},method:{},headers:{}", url, method, request.getHeaders());
-        //不需要网关签权的url
+        // 白名单，不需要网关签权的url
         if (authService.ignoreAuthentication(url)) {
             return chain.filter(exchange);
         }
         // 如果请求未携带token信息, 直接跳出
-        if (StringUtils.isBlank(authentication) || !authentication.startsWith(BEARER)) {
+        if (StringUtils.isBlank(authentication) || !authentication.startsWith(AuthConstants.JWT_TOKEN_PREFIX)) {
             log.debug("url:{},method:{},headers:{}, 请求未携带token信息", url, method, request.getHeaders());
             return unauthorized(exchange);
         }
