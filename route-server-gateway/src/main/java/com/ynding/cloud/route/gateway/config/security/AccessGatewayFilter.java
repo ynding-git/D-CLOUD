@@ -1,37 +1,48 @@
-package com.ynding.cloud.route.gateway.filter;
+package com.ynding.cloud.route.gateway.config.security;
 
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
+import com.nimbusds.jose.JWSObject;
 import com.ynding.cloud.auth.api.authentication.service.IAuthService;
 import com.ynding.cloud.common.model.bo.AuthConstants;
+import com.ynding.cloud.common.model.bo.ResponseCode;
+import com.ynding.cloud.route.gateway.util.ResponseUtils;
+import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.buffer.DataBuffer;
+import org.springframework.core.Ordered;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.web.server.ServerWebExchange;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import java.net.URLEncoder;
 
 /**
  * 请求url权限校验
+ *
  * @author ynding
  */
 @Configuration
 @ComponentScan(basePackages = "com.ynding.cloud.auth.api.authentication")
 @Slf4j
-public class AccessGatewayFilter implements GlobalFilter {
+@RequiredArgsConstructor
+public class AccessGatewayFilter implements GlobalFilter, Ordered {
 
     /**
      * 由authentication-client模块提供签权的feign客户端
      */
-    @Autowired
-    private IAuthService authService;
+    private final IAuthService authService;
+
+    private final RedisTemplate redisTemplate;
 
     /**
      * 1.首先网关检查token是否有效，无效直接返回401，不调用签权服务
@@ -41,38 +52,52 @@ public class AccessGatewayFilter implements GlobalFilter {
      * @param chain
      * @return
      */
+    @SneakyThrows
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
+        ServerHttpResponse response = exchange.getResponse();
+
         String authentication = request.getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
         String method = request.getMethodValue();
         String url = request.getPath().value();
         log.debug("url:{},method:{},headers:{}", url, method, request.getHeaders());
         // 白名单，不需要网关签权的url
-        if (authService.ignoreAuthentication(url)) {
+       /* if (authService.ignoreAuthentication(url)) {
             return chain.filter(exchange);
-        }
-        // 如果请求未携带token信息, 直接跳出
+        }*/
+        // 非JWT或者JWT为空不作处理
         if (StringUtils.isBlank(authentication) || !authentication.startsWith(AuthConstants.JWT_TOKEN_PREFIX)) {
             log.debug("url:{},method:{},headers:{}, 请求未携带token信息", url, method, request.getHeaders());
-            return unauthorized(exchange);
-        }
-        //调用签权服务看用户是否有权限，若有权限进入下一个filter
-        if (authService.hasPermission(authentication, url, method)) {
             return chain.filter(exchange);
         }
-        return unauthorized(exchange);
+        // 是否黑名单
+        String token = authentication.replace(AuthConstants.JWT_TOKEN_PREFIX, Strings.EMPTY);
+        JWSObject jwsObject = JWSObject.parse(token);
+        String payload = jwsObject.getPayload().toString();
+        JSONObject jsonObject = JSONUtil.parseObj(payload);
+        String jti = jsonObject.getStr(AuthConstants.JWT_JTI);
+        Boolean isBlack = redisTemplate.hasKey(AuthConstants.TOKEN_BLACKLIST_PREFIX + jti);
+        if (isBlack) {
+            return ResponseUtils.writeErrorInfo(response, ResponseCode.TOKEN_ACCESS_FORBIDDEN);
+        }
+
+        // 存在token且不是黑名单，request写入JWT的载体信息
+        request = exchange.getRequest().mutate()
+                .header(AuthConstants.JWT_PAYLOAD_KEY, URLEncoder.encode(payload, "UTF-8"))
+                .build();
+        exchange = exchange.mutate().request(request).build();
+
+        //调用签权服务看用户是否有权限，若有权限进入下一个filter
+      /*  if (authService.hasPermission(authentication, url, method)) {
+            return chain.filter(exchange);
+        }*/
+        return chain.filter(exchange);
     }
 
-    /**
-     * 网关拒绝，返回401
-     *
-     * @param
-     */
-    private Mono<Void> unauthorized(ServerWebExchange serverWebExchange) {
-        serverWebExchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-        DataBuffer buffer = serverWebExchange.getResponse()
-                .bufferFactory().wrap(HttpStatus.UNAUTHORIZED.getReasonPhrase().getBytes());
-        return serverWebExchange.getResponse().writeWith(Flux.just(buffer));
+    @Override
+    public int getOrder() {
+        return 0;
     }
+
 }

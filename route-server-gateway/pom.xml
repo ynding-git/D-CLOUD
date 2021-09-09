@@ -17,12 +17,12 @@
     </properties>
 
     <dependencies>
-        <!-- 公共配置模块 -->
-        <!--<dependency>
+        <!-- redis配置模块 -->
+        <dependency>
             <groupId>com.ynding.cloud</groupId>
-            <artifactId>common-config</artifactId>
+            <artifactId>redis-config</artifactId>
             <version>2.0-SNAPSHOT</version>
-        </dependency>-->
+        </dependency>
         <!--<dependency>
             <groupId>com.ynding.cloud</groupId>
             <artifactId>common-exception</artifactId>
@@ -45,10 +45,19 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
-        <!-- oauth2-->
+        <!-- OAuth2资源服务器-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-jose</artifactId>
+        </dependency>
+        <!-- loadbalancer -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
         <!--JPA-->
         <dependency>

@@ -23,8 +23,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import static com.ynding.cloud.common.model.bo.AuthConstants.TOKEN_HEADER;
-
 
 /**
  * <p>实现权限验证判断 </p>
@@ -50,23 +48,19 @@ public class AuthorizationManager implements ReactiveAuthorizationManager<Author
         ServerHttpRequest request = authorizationContext.getExchange().getRequest();
         String path = request.getURI().getPath();
         PathMatcher pathMatcher = new AntPathMatcher();
-
         // 对应跨域的预检请求直接放行
         if (request.getMethod() == HttpMethod.OPTIONS) {
             return Mono.just(new AuthorizationDecision(true));
         }
-
         // 非管理端路径无需鉴权直接放行
        /* if (!pathMatcher.match(AuthConstants.ADMIN_URL_PATTERN, path)) {
             return Mono.just(new AuthorizationDecision(true));
         }*/
-
         // token为空拒绝访问
         String token = request.getHeaders().getFirst(AuthConstants.TOKEN_HEADER);
         if (StrUtil.isBlank(token)) {
             return Mono.just(new AuthorizationDecision(false));
         }
-
         // 从缓存取资源权限角色关系列表
         Map<Object, Object> resourceRolesMap = redisTemplate.opsForHash().entries(AuthConstants.RESOURCE_ROLES_KEY);
         Iterator<Object> iterator = resourceRolesMap.keySet().iterator();

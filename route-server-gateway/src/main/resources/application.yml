@@ -60,12 +60,13 @@ spring:
             redis-rate-limiter.burstCapacity: 10   #令牌桶的容积
             rate-limiter: "#{@defaultRedisRateLimiter}"  #SPEL表达式去的对应的bean
             key-resolver: "#{@apiKeyResolver}" #SPEL表达式去的对应的bean
+  main:
+    allow-bean-definition-overriding: true
 
 #网关白名单，无需要签权url
 gate:
   ignore:
-    authentication:
-      startWith: /oauth,/open
+    urls: /oauth,/open
 
 security:
   oauth2:

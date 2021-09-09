@@ -7,7 +7,7 @@ spring:
             context-path: ${server.servlet.context-path}/actuator
         server-addr: ${NACOS_HOST:localhost}:${NACOS_PORT:8848}
         #nacos的命名空间ID，默认是public
-        namespace: ${NACOS_NAMESPACE:49dca007-be2d-4a01-bcbc-00c3318fb25f}
+        namespace: ${NACOS_NAMESPACE:287a0b6d-6553-49dd-a57b-7a8f1fbed95d}
         group: DEFAULT_GROUP
       config:
         server-addr: ${spring.cloud.nacos.discovery.server-addr}
@@ -20,5 +20,8 @@ spring:
             group: ${spring.cloud.nacos.config.group}
             refresh: true
           - data-id: cloud-mysql.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
+          - data-id: cloud-redis.yaml
             group: ${spring.cloud.nacos.config.group}
             refresh: true
