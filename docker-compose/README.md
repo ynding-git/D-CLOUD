@@ -1,3 +1,6 @@
+## 生成docker镜像命令
+mvn clean package docker:build
+
 ## 启动基础服务
 postgres、redis、rabbitmq
 `docker-compose up -d`
@@ -33,3 +36,6 @@ postgres、redis、rabbitmq
 
 ## 启动jenkins
 `docker-compose -f docker-compose.yml -f docker-compose.jenkins.yml up`
+
+## 启动zookeeper
+`docker-compose -f docker-compose.yml -f docker-compose.zookeeper.yml up`

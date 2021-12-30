@@ -30,6 +30,11 @@
         <springboot-admin.version>2.2.2</springboot-admin.version>
         <hutool.version>5.1.0</hutool.version>
         <lombok.version>1.18.8</lombok.version>
+
+        <dubbo.registry.nacos.version>2.6.7</dubbo.registry.nacos.version>
+        <curator.framework.version>4.0.1</curator.framework.version>
+        <curator.recipes.version>4.0.1</curator.recipes.version>
+        <zkclient.version>0.10</zkclient.version>
     </properties>
 
     <dependencyManagement>
