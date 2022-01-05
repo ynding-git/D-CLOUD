@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: route-server-gateway
+  main:
+    allow-bean-definition-overriding: true
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -60,13 +62,11 @@ spring:
             redis-rate-limiter.burstCapacity: 10   #令牌桶的容积
             rate-limiter: "#{@defaultRedisRateLimiter}"  #SPEL表达式去的对应的bean
             key-resolver: "#{@apiKeyResolver}" #SPEL表达式去的对应的bean
-  main:
-    allow-bean-definition-overriding: true
 
 #网关白名单，无需要签权url
 gate:
   ignore:
-    urls: /oauth,/open
+    urls: /oauth,/open,/login,/getToken
 
 security:
   oauth2:
@@ -93,3 +93,12 @@ logging:
     com.netflix: WARN
     org.springframework.web: WARN
     com.ynding.cloud: DEBUG
+
+dubbo:
+  application:
+    name: route-server-gateway-provider
+  protocols:
+    dubbo:
+      port: 30104      # port 为协议端口（ -1 表示自增端口，从 20880 开始）
+  cloud:
+    subscribed-services: auth-server-authentication-provider,auth-server-admin-provider

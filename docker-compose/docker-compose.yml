@@ -8,8 +8,8 @@ services:
       - ../data/redis:/data
       - ./app/redis/redis.conf:/etc/redis/redis.conf
     command: redis-server /etc/redis/redis.conf
-#    environment:
-#      - REDIS_PASSWORD=123456
+    environment:
+      - REDIS_PASSWORD=123456
     networks:
       - sc-net
     ports:

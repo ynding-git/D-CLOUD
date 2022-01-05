@@ -30,6 +30,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class GatewayRedisAutoConfiguration {
 
+    @Qualifier("myLettuceConnectionFactory")
     private final LettuceConnectionFactory lettuceConnectionFactory;
 
     @Bean

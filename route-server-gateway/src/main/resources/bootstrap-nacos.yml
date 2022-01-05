@@ -25,3 +25,6 @@ spring:
           - data-id: cloud-redis.yaml
             group: ${spring.cloud.nacos.config.group}
             refresh: true
+          - data-id: cloud-dubbo.yaml
+            group: ${spring.cloud.nacos.config.group}
+            refresh: true
