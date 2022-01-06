@@ -31,10 +31,7 @@
         <hutool.version>5.1.0</hutool.version>
         <lombok.version>1.18.8</lombok.version>
 
-        <dubbo.registry.nacos.version>2.6.7</dubbo.registry.nacos.version>
-        <curator.framework.version>4.0.1</curator.framework.version>
-        <curator.recipes.version>4.0.1</curator.recipes.version>
-        <zkclient.version>0.10</zkclient.version>
+        <mybatis.plus.version>3.4.3</mybatis.plus.version>
     </properties>
 
     <dependencyManagement>
@@ -63,6 +60,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -71,6 +75,7 @@
         <module>core-server-config</module>-->
         <module>route-server-zuul</module>
         <module>route-server-gateway</module>
+        <module>route-gateway-admin</module>
     </modules>
 
     <repositories>

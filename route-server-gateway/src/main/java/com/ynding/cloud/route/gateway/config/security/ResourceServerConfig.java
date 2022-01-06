@@ -52,6 +52,7 @@ public class ResourceServerConfig {
         // 自定义处理JWT请求头过期或签名错误的结果
 //        http.oauth2ResourceServer().authenticationEntryPoint(authenticationEntryPoint());
         http.authorizeExchange()
+                // 白名单
                 .pathMatchers(authService.ignoreUrls()).permitAll()
                 .anyExchange().access(accessManager)
                 .and()

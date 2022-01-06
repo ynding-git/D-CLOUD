@@ -1,16 +1,12 @@
-package com.ynding.cloud.route.gateway.controller;
+package com.ynding.cloud.route.gateway.rest;
 
 import com.ynding.cloud.auth.api.authentication.api.IAuthApiService;
-import com.ynding.cloud.auth.api.authentication.model.bo.AccessToken;
 import com.ynding.cloud.auth.api.authentication.model.bo.UserInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
