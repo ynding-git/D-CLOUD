@@ -1,6 +1,6 @@
 package com.ynding.cloud.route.gateway;
 
-import com.ynding.cloud.common.redis.data.annotation.CustomRedisConnectionFactory;
+import com.ynding.cloud.common.redis.data.annotation.CustomLettuceRedisDataConfig;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.SpringApplication;
@@ -24,9 +24,9 @@ import java.util.stream.Collectors;
  **/
 @SpringBootApplication
 @EnableDiscoveryClient
-@CustomRedisConnectionFactory
+@CustomLettuceRedisDataConfig
 @EnableDubbo
-@EnableFeignClients
+//@EnableFeignClients
 @Import(BeanValidatorPluginsConfiguration.class)
 public class RouteServerGatewayApplication {
     public static void main(String[] args) {

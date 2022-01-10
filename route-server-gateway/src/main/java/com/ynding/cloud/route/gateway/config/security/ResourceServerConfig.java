@@ -1,31 +1,23 @@
 package com.ynding.cloud.route.gateway.config.security;
 
-import cn.hutool.core.codec.Base64;
-import cn.hutool.core.io.IoUtil;
 import com.ynding.cloud.auth.api.authentication.service.IAuthService;
-import com.ynding.cloud.common.model.bo.AuthConstants;
 import com.ynding.cloud.common.model.bo.ResponseCode;
 import com.ynding.cloud.route.gateway.util.ResponseUtils;
 import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.convert.converter.Converter;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
-import org.springframework.security.authentication.AbstractAuthenticationToken;
+import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
+import org.springframework.security.config.web.server.SecurityWebFiltersOrder;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
-import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.security.oauth2.server.resource.web.server.ServerBearerTokenAuthenticationConverter;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.ServerAuthenticationEntryPoint;
+import org.springframework.security.web.server.authentication.AuthenticationWebFilter;
 import org.springframework.security.web.server.authorization.ServerAccessDeniedHandler;
+import org.springframework.web.filter.CorsFilter;
 import reactor.core.publisher.Mono;
-
-import java.io.InputStream;
-import java.security.KeyFactory;
-import java.security.interfaces.RSAPublicKey;
-import java.security.spec.X509EncodedKeySpec;
 
 /**
  * <p> 资源服务器配置</p>
@@ -36,9 +28,11 @@ import java.security.spec.X509EncodedKeySpec;
 @RequiredArgsConstructor
 @Configuration
 @EnableWebFluxSecurity
+@ComponentScan(basePackages = "com.ynding.cloud.auth.api.authentication")
 public class ResourceServerConfig {
     private final AuthorizationManager accessManager;
     private final IAuthService authService;
+    private final ReactiveAuthenticationManager jwtAuthenticationManager;
 
     /**
      * JWT采用非对称加密，不需要配置公钥
@@ -51,17 +45,26 @@ public class ResourceServerConfig {
         ;
         // 自定义处理JWT请求头过期或签名错误的结果
 //        http.oauth2ResourceServer().authenticationEntryPoint(authenticationEntryPoint());
-        http.authorizeExchange()
+        // 认证过滤器
+        AuthenticationWebFilter authorizationWebFilter = new AuthenticationWebFilter(jwtAuthenticationManager);
+        authorizationWebFilter.setServerAuthenticationConverter(new ServerBearerTokenAuthenticationConverter());
+
+        http.httpBasic().disable()
+                .csrf().disable()
+                .authorizeExchange()
                 // 白名单
                 .pathMatchers(authService.ignoreUrls()).permitAll()
                 .anyExchange().access(accessManager)
-                .and()
-                .exceptionHandling()
+                .and().exceptionHandling()
                 // 处理未授权
                 .accessDeniedHandler(accessDeniedHandler())
                 //处理未认证
                 .authenticationEntryPoint(authenticationEntryPoint())
-                .and().csrf().disable();
+                .and()
+                // 跨域过滤器
+//                .addFilterAt(corsFilter, SecurityWebFiltersOrder.CORS)
+                // token的认证过滤器，用于校验token和认证
+                .addFilterAt(authorizationWebFilter, SecurityWebFiltersOrder.AUTHENTICATION);
         return http.build();
     }
 

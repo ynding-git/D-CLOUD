@@ -35,7 +35,7 @@ import java.util.Set;
 @Slf4j
 public class AuthorizationManager implements ReactiveAuthorizationManager<AuthorizationContext> {
 
-    private final RedisTemplate redisTemplate;
+    private final RedisTemplate<String,Object> redisTemplate;
 
     /**
      * 实现权限验证判断

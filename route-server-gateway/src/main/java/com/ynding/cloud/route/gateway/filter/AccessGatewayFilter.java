@@ -1,4 +1,4 @@
-package com.ynding.cloud.route.gateway.config.security;
+package com.ynding.cloud.route.gateway.filter;
 
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
@@ -21,6 +21,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
+import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
@@ -31,16 +32,10 @@ import java.net.URLEncoder;
  *
  * @author ynding
  */
-@Configuration
-@ComponentScan(basePackages = "com.ynding.cloud.auth.api.authentication")
+@Component
 @Slf4j
 @RequiredArgsConstructor
 public class AccessGatewayFilter implements GlobalFilter, Ordered {
-
-    /**
-     * 由authentication-client模块提供签权的feign客户端
-     */
-    private final IAuthService authService;
 
     private final RedisTemplate redisTemplate;
 
