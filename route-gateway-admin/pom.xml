@@ -23,20 +23,14 @@
             <version>2.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-           <groupId>com.ynding.cloud</groupId>
-           <artifactId>common-exception</artifactId>
-           <version>2.0-SNAPSHOT</version>
-       </dependency>
-        <!-- 公共配置模块 -->
-        <dependency>
             <groupId>com.ynding.cloud</groupId>
-            <artifactId>common-config</artifactId>
+            <artifactId>common-exception</artifactId>
             <version>2.0-SNAPSHOT</version>
         </dependency>
         <!-- redis配置模块 -->
         <dependency>
             <groupId>com.ynding.cloud</groupId>
-            <artifactId>redis-config</artifactId>
+            <artifactId>redis-data-config</artifactId>
             <version>2.0-SNAPSHOT</version>
         </dependency>
 
@@ -49,6 +43,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-oauth2</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-jose</artifactId>
+        </dependency>
         <!--mysql-->
         <dependency>
             <groupId>mysql</groupId>
@@ -58,6 +56,45 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
+        <!-- fastjson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--docker镜像build插件-->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.2.0</version>
+                <configuration>
+                    <!-- 镜像名,注意imageName一定要是符合正则[a-z0-9-_.]的，否则构建不会成功 -->
+                    <imageName>cloud/${project.artifactId}</imageName>
+                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <rm>true</rm>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

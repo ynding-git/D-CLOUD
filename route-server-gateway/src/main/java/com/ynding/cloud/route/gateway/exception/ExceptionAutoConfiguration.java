@@ -1,4 +1,3 @@
-/*
 package com.ynding.cloud.route.gateway.exception;
 
 import org.springframework.beans.factory.ObjectProvider;
@@ -22,11 +21,10 @@ import org.springframework.web.reactive.result.view.ViewResolver;
 import java.util.Collections;
 import java.util.List;
 
-*/
+
 /**
  * @author Administrator
- *//*
-
+ */
 @Configuration
 @ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.REACTIVE)
 @ConditionalOnClass(WebFluxConfigurer.class)
@@ -68,4 +66,3 @@ public class ExceptionAutoConfiguration {
         return exceptionHandler;
     }
 }
-*/

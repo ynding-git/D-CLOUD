@@ -4,9 +4,11 @@ import com.ynding.cloud.common.redis.data.annotation.CustomLettuceRedisDataConfi
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
@@ -30,11 +32,13 @@ import java.util.stream.Collectors;
 @Import(BeanValidatorPluginsConfiguration.class)
 public class RouteServerGatewayApplication {
     public static void main(String[] args) {
-        SpringApplication.run(RouteServerGatewayApplication.class, args);
+        new SpringApplicationBuilder(RouteServerGatewayApplication.class)
+                .web(WebApplicationType.REACTIVE).run(args);
     }
 
     /**
      * ribbon/feign restTemplate 等http协议接口， 返回类序列化
+     *
      * @param converters
      * @return
      */

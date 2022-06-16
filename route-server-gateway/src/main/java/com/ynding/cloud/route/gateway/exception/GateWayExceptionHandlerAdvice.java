@@ -1,4 +1,3 @@
-/*
 package com.ynding.cloud.route.gateway.exception;
 
 import com.ynding.cloud.common.exception.SystemErrorType;
@@ -12,11 +11,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.server.ResponseStatusException;
 
-*/
+
 /**
  * @author Administrator
- *//*
-
+ */
 @Slf4j
 @Component
 public class GateWayExceptionHandlerAdvice {
@@ -72,4 +70,3 @@ public class GateWayExceptionHandlerAdvice {
         return result;
     }
 }
-*/

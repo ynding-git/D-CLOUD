@@ -38,7 +38,7 @@ spring:
         - id: auth-server-authentication
           uri: lb://auth-server-authentication
           predicates:
-            - Path=/auth/**
+            - Path=/authentication/**
           filters:
             - StripPrefix=1
             # 限流过滤器，使用gateway内置令牌算法
@@ -72,7 +72,7 @@ security:
     resource:
       jwt:
 #        key-uri: http://${AUTHENTICATION_HOST:localhost}:${AUTHENTICATION_PORT:10402}/oauth/token_key #获取解析jwt，验签名key的路径
-        key-value: 123456
+        key-value: ${SIGNING_KEY:ynding}
     client:
       client-id: gateway #获取验签key需要身份认证，这里是网关的clientId
       client-secret: 123456 #获取验签key需要身份认证，这里是网关的secret

@@ -1,4 +1,3 @@
-/*
 package com.ynding.cloud.route.gateway.exception;
 
 import lombok.extern.slf4j.Slf4j;
@@ -16,26 +15,15 @@ import reactor.core.publisher.Mono;
 
 import java.util.Map;
 
-*/
-/**
- * @author ynding
- *//*
 
+/**
+ * @author Administrator
+ */
 @Slf4j
 public class CustomErrorWebExceptionHandler extends DefaultErrorWebExceptionHandler {
 
     @Autowired
     private GateWayExceptionHandlerAdvice gateWayExceptionHandlerAdvice;
-
-    */
-/**
-     * Create a new {@code DefaultErrorWebExceptionHandler} instance.
-     *
-     * @param errorAttributes    the error attributes
-     * @param resourceProperties the resources configuration properties
-     * @param errorProperties    the error configuration properties
-     * @param applicationContext the current application context
-     *//*
 
     public CustomErrorWebExceptionHandler(ErrorAttributes errorAttributes, ResourceProperties resourceProperties,
                                           ErrorProperties errorProperties, ApplicationContext applicationContext) {
@@ -58,4 +46,3 @@ public class CustomErrorWebExceptionHandler extends DefaultErrorWebExceptionHand
                 //.doOnNext((resp) -> logError(request, errorStatus));
     }
 }
-*/
